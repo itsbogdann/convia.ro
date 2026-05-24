@@ -7,6 +7,9 @@ import {
   Zap,
   Globe,
   Sparkles,
+  TrendingUp,
+  Timer,
+  Check,
   type LucideIcon,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
@@ -83,7 +86,8 @@ export function FeaturesSection() {
             <FeatureCard
               icon={Zap}
               title="Gata în 5 minute"
-              description="Fără cod, fără IT, fără bătăi de cap. Te înregistrezi, urci informațiile, botul e live."
+              description="Fără cod, fără IT, fără bătăi de cap. Te înregistrezi, urci informațiile, botul e live pe site sau pe WhatsApp."
+              visual={<SetupVisual />}
             />
           </FadeInOnScroll>
         </div>
@@ -194,32 +198,150 @@ function KnowledgeVisual() {
 }
 
 function AnalyticsVisual() {
-  const bars = [42, 78, 55, 91, 67, 88, 73];
-  const max = Math.max(...bars);
+  const days = [
+    { label: "L", value: 142 },
+    { label: "M", value: 178 },
+    { label: "M", value: 155 },
+    { label: "J", value: 191, peak: true },
+    { label: "V", value: 167 },
+    { label: "S", value: 188 },
+    { label: "D", value: 173 },
+  ];
+  const max = Math.max(...days.map((d) => d.value));
+  const avg = Math.round(days.reduce((sum, d) => sum + d.value, 0) / days.length);
+
   return (
     <div className="w-full bg-white border border-line rounded-xl p-4 shadow-card">
+      {/* Header */}
       <div className="flex items-center justify-between mb-3">
         <div>
-          <div className="text-[10.5px] uppercase tracking-[0.08em] font-bold text-soft">Conversații</div>
+          <div className="text-[10.5px] uppercase tracking-[0.08em] font-bold text-soft">
+            Conversații
+          </div>
           <div className="text-h4 font-gilroy text-ink leading-none mt-1">1.247</div>
         </div>
         <div className="text-right">
-          <div className="text-[10.5px] uppercase tracking-[0.08em] font-bold text-soft">Săptămâna asta</div>
-          <div className="text-[12.5px] font-semibold text-success mt-1">+18% vs sept tr.</div>
+          <div className="text-[10.5px] uppercase tracking-[0.08em] font-bold text-soft">
+            Săptămâna asta
+          </div>
+          <div className="text-[12.5px] font-semibold text-success mt-1 flex items-center gap-1 justify-end">
+            <TrendingUp className="h-3 w-3" strokeWidth={3} />
+            +18% vs sept. tr.
+          </div>
         </div>
       </div>
-      <div className="flex items-end gap-1.5 h-12">
-        {bars.map((v, i) => (
-          <div key={i} className="flex-1 flex flex-col justify-end">
-            <div
-              className="bg-gradient-to-b from-accent to-primary-500 rounded-sm"
-              style={{ height: `${(v / max) * 100}%`, minHeight: "8%" }}
-            />
+
+      {/* Bar chart + average line */}
+      <div className="pt-5">
+        {/* Bars container is the positioning context for the avg line */}
+        <div className="relative flex gap-1.5 h-14">
+          {/* Average baseline (positioned within the bars area) */}
+          <div
+            className="absolute left-0 right-0 z-10 pointer-events-none border-t border-dashed border-line-strong/70"
+            style={{ bottom: `${(avg / max) * 100}%` }}
+          >
+            <span className="absolute -top-2 right-0 bg-white px-1 text-[9px] font-bold uppercase tracking-[0.05em] text-soft leading-none">
+              avg {avg}
+            </span>
           </div>
-        ))}
+
+          {/* Bars */}
+          {days.map((d, i) => (
+            <div key={i} className="relative flex-1 flex flex-col justify-end">
+              {d.peak && (
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 text-[9.5px] font-bold text-accent bg-accent-soft border border-accent-ring/40 px-1.5 py-0.5 rounded-md leading-none whitespace-nowrap z-20">
+                  {d.value}
+                </span>
+              )}
+              <div
+                className={`w-full rounded-md ${
+                  d.peak
+                    ? "bg-gradient-to-b from-accent to-primary-500 shadow-[0_4px_10px_-2px_rgba(29,78,216,0.45)]"
+                    : "bg-gradient-to-b from-accent/55 to-primary-500/30"
+                }`}
+                style={{ height: `${(d.value / max) * 100}%`, minHeight: "10%" }}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Day labels */}
+        <div className="mt-2 flex gap-1.5">
+          {days.map((d, i) => (
+            <span
+              key={i}
+              className={`flex-1 text-center text-[10px] font-bold ${
+                d.peak ? "text-accent" : "text-soft"
+              }`}
+            >
+              {d.label}
+            </span>
+          ))}
+        </div>
       </div>
-      <div className="mt-2 flex justify-between text-[9.5px] text-soft font-semibold">
-        <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+    </div>
+  );
+}
+
+function SetupVisual() {
+  const steps = [
+    { label: "Te înregistrezi", time: "0:30", done: true },
+    { label: "Încarci informațiile", time: "2:30", done: true },
+    { label: "Botul e LIVE", time: "~5:00", live: true },
+  ];
+  return (
+    <div className="w-full bg-white border border-line rounded-xl p-4 shadow-card">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <div className="text-[10.5px] uppercase tracking-[0.08em] font-bold text-soft">
+          Cât durează
+        </div>
+        <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-accent-soft border border-accent-ring/30 text-[11px] font-bold text-accent">
+          <Timer className="h-3 w-3" strokeWidth={2.5} />
+          ~5 min
+        </div>
+      </div>
+
+      {/* Timeline */}
+      <ul className="relative space-y-3">
+        {/* Vertical connector line */}
+        <div
+          className="absolute left-3 top-3 bottom-3 w-px bg-line"
+          aria-hidden="true"
+        />
+
+        {steps.map((step, i) => (
+          <li key={i} className="relative flex items-center gap-3">
+            {step.live ? (
+              <span className="relative z-10 h-6 w-6 rounded-full bg-accent flex items-center justify-center shadow-[0_4px_10px_-2px_rgba(29,78,216,0.45)] ring-4 ring-accent/15">
+                <span className="h-2 w-2 rounded-full bg-white animate-pulse" />
+              </span>
+            ) : (
+              <span className="relative z-10 h-6 w-6 rounded-full bg-success flex items-center justify-center">
+                <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} />
+              </span>
+            )}
+            <span
+              className={`flex-1 text-[12.5px] font-semibold leading-tight ${
+                step.live ? "text-accent" : "text-ink-2"
+              }`}
+            >
+              {step.label}
+            </span>
+            <span
+              className={`text-[11px] font-bold tabular-nums leading-tight ${
+                step.live ? "text-accent" : "text-soft"
+              }`}
+            >
+              {step.time}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      {/* Footer note */}
+      <div className="mt-4 pt-3 border-t border-line text-[11px] text-soft text-center">
+        Fără card, fără IT, fără cod
       </div>
     </div>
   );

@@ -140,6 +140,18 @@ module.exports = {
           "0%": { opacity: "0", transform: "translateY(4px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "message-in": {
+          "0%": { opacity: "0", transform: "translateY(8px) scale(0.98)" },
+          "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+        },
+        "modal-backdrop-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        "modal-panel-in": {
+          "0%": { opacity: "0", transform: "scale(0.96)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
       },
       animation: {
         "glow-pulse": "glow-pulse 6s ease-in-out infinite",
@@ -149,6 +161,9 @@ module.exports = {
         "bounce-soft": "bounce-soft 2s ease-in-out infinite",
         "dot-pulse": "dot-pulse 2s ease-in-out infinite",
         "dropdown-in": "dropdown-in 0.18s ease-out forwards",
+        "message-in": "message-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "modal-backdrop-in": "modal-backdrop-in 0.18s ease-out forwards",
+        "modal-panel-in": "modal-panel-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
       maxWidth: {
         "container": "1180px",

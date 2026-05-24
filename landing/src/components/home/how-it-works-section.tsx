@@ -1,4 +1,13 @@
-import { FileUp, Globe, Check, Sparkles, MessageSquare } from "lucide-react";
+import Link from "next/link";
+import {
+  FileUp,
+  Globe,
+  Check,
+  Sparkles,
+  MessageSquare,
+  ArrowRight,
+  HeartHandshake,
+} from "lucide-react";
 import { Mascot } from "@/components/ui/brand-mark";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
@@ -54,6 +63,46 @@ export function HowItWorksSection() {
             />
           </FadeInOnScroll>
         </div>
+
+        {/* "We'll set it up for you" callout */}
+        <FadeInOnScroll>
+          <div
+            className="mt-10 relative overflow-hidden rounded-2xl border border-accent-ring/40 p-7 sm:p-8"
+            style={{
+              background:
+                "linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 60%, #EFF6FF 100%)",
+            }}
+          >
+            <div className="flex flex-col md:flex-row md:items-center gap-6">
+              <div className="flex items-start gap-4 flex-1">
+                <div className="h-12 w-12 rounded-2xl bg-white border border-accent-ring/40 shadow-card flex items-center justify-center flex-shrink-0">
+                  <HeartHandshake className="h-5 w-5 text-accent" strokeWidth={2.25} />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-accent text-white text-[10.5px] font-bold tracking-[0.08em] uppercase">
+                      Gratuit
+                    </span>
+                    <span className="text-[12px] font-bold tracking-[0.06em] uppercase text-ink-3">
+                      Nu te descurci singur?
+                    </span>
+                  </div>
+                  <h3 className="text-h4 font-gilroy text-ink leading-tight tracking-tight">
+                    Îl instalăm noi pe site-ul tău, fără niciun cost.
+                  </h3>
+                  <p className="mt-2 text-[14.5px] font-semibold text-ink-3 leading-relaxed">
+                    Echipa Convia adaugă botul pe site, conectează WhatsApp și învață botul cu
+                    informațiile afacerii tale. Tu te ocupi de afacere, noi de tehnică.
+                  </p>
+                </div>
+              </div>
+              <Link href="#contact" className="btn-primary flex-shrink-0 self-start md:self-auto">
+                Cere setup gratuit
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </FadeInOnScroll>
       </div>
     </section>
   );
@@ -109,7 +158,7 @@ function UploadVisual() {
   return (
     <div className="h-full flex flex-col justify-center gap-2">
       {[
-        { icon: Globe, name: "convia.ro", status: "Indexat", color: "text-accent", bg: "bg-accent-soft" },
+        { icon: Globe, name: "site-restaurant.ro", status: "Indexat", color: "text-accent", bg: "bg-accent-soft" },
         { icon: FileUp, name: "meniu-restaurant.pdf", status: "32 pagini", color: "text-[#F5871F]", bg: "bg-[#F5871F]/12" },
         { icon: Sparkles, name: "Întrebări frecvente", status: "12 intrări", color: "text-success", bg: "bg-success/12" },
       ].map((item, i) => {
@@ -138,13 +187,13 @@ function DeployVisual() {
   return (
     <div className="h-full flex flex-col justify-center gap-2.5">
       {/* Code snippet */}
-      <div className="bg-ink rounded-lg px-3 py-2.5 font-mono text-[10.5px] leading-relaxed text-white/90 shadow-card">
-        <span className="text-[#94A3B8]">&lt;</span>
-        <span className="text-[#60A5FA]">script </span>
-        <span className="text-[#FBBF24]">src</span>
-        <span className="text-white">=</span>
-        <span className="text-[#86EFAC]">"convia.ro/w.js"</span>
-        <span className="text-[#94A3B8]"> /&gt;</span>
+      <div className="bg-surface-2 border border-line rounded-lg px-3 py-2.5 font-mono text-[10.5px] leading-relaxed text-ink-2 shadow-card">
+        <span className="text-soft">&lt;</span>
+        <span className="text-accent font-semibold">script </span>
+        <span className="text-[#9333EA]">src</span>
+        <span className="text-ink-3">=</span>
+        <span className="text-[#059669]">"convia.ro/w.js"</span>
+        <span className="text-soft"> /&gt;</span>
       </div>
       {/* Channels */}
       <div className="text-[10px] uppercase tracking-[0.08em] font-bold text-soft">Canale active</div>
@@ -196,7 +245,7 @@ function ConversationVisual() {
       {/* Bot message */}
       <div className="flex justify-start items-end gap-1.5">
         <div className="h-5 w-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mb-0.5">
-          <Mascot size={14} bodyColor="#FFFFFF" eyeColor="#1F4ED8" />
+          <Mascot size={14} bodyColor="#FFFFFF" eyeColor="#FFFFFF" />
         </div>
         <div
           className="bg-white text-ink-2 border border-line text-[11.5px] leading-snug px-2.5 py-1.5 shadow-card max-w-[78%]"

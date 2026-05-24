@@ -12,10 +12,13 @@
     "clean": "rm -rf .next node_modules .turbo"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "lucide-react": "^0.460.0",
+    "motion": "^12.40.0",
     "next": "15.5.12",
     "react": "19.1.4",
-    "react-dom": "19.1.4"
+    "react-dom": "19.1.4",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@types/node": "^20",

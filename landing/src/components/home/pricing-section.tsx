@@ -24,8 +24,8 @@ export function PricingSection() {
               Prețuri simple. Fără surprize.
             </h2>
             <p className="mt-5 text-body-lg text-ink-3">
-              Începi gratuit. Plătești când vrei mai mult. Fără costuri ascunse, fără taxe per
-              conversație, fără taxe per mesaj.
+              Începi gratuit. Plătești când vrei mai mult. Dacă depășești limita lunară, plătești
+              doar pentru conversațiile în plus — niciodată nu îți blocăm botul.
             </p>
           </div>
         </FadeInOnScroll>
@@ -65,69 +65,83 @@ export function PricingSection() {
           </div>
         </FadeInOnScroll>
 
-        {/* 3 tier cards */}
+        {/* Plan cards */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-          {plans.map((plan, i) => (
-            <FadeInOnScroll key={plan.id} delay={i * 80}>
-              <div
-                className={`relative h-full flex flex-col p-7 rounded-2xl border transition-all ${
-                  plan.highlight
-                    ? "bg-white border-accent shadow-[0_20px_50px_-10px_rgba(29,78,216,0.25)] ring-1 ring-accent/20"
-                    : "bg-white border-line shadow-card hover:shadow-card-lg"
-                }`}
-              >
-                {plan.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-accent text-white text-[11px] font-bold uppercase tracking-[0.06em] shadow-cta">
-                      <Sparkles className="h-3 w-3" />
-                      Cel mai popular
-                    </span>
-                  </div>
-                )}
+          {plans.map((plan, i) => {
+            const isFree = plan.monthly === 0;
+            const price = billing === "monthly" ? plan.monthly : plan.yearly;
 
-                <div className="mb-5">
-                  <h3 className="text-h3 font-gilroy text-ink mb-1.5">{plan.name}</h3>
-                  <p className="text-[13.5px] text-ink-3 leading-relaxed min-h-[40px]">
-                    {plan.description}
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <div className="flex items-baseline gap-1.5">
-                    <span className="text-5xl font-bold text-ink font-gilroy tracking-tight">
-                      {billing === "monthly" ? plan.monthly : plan.yearly}€
-                    </span>
-                    <span className="text-[14px] text-muted font-semibold">/ lună</span>
-                  </div>
-                  <div className="mt-1.5 text-[12px] text-soft">
-                    {plan.monthly === 0
-                      ? "Gratuit pentru totdeauna"
-                      : billing === "yearly"
-                        ? `Plătit anual (${plan.yearly * 12}€/an) · + TVA`
-                        : "+ TVA · plătit lunar"}
-                  </div>
-                </div>
-
-                <Link
-                  href={plan.cta.href}
-                  className={`w-full text-center mb-7 ${
-                    plan.highlight ? "btn-primary" : "btn-secondary"
+            return (
+              <FadeInOnScroll key={plan.id} delay={i * 80}>
+                <div
+                  className={`relative h-full flex flex-col p-7 rounded-2xl border transition-all ${
+                    plan.highlight
+                      ? "bg-white border-accent shadow-[0_20px_50px_-10px_rgba(29,78,216,0.25)] ring-1 ring-accent/20"
+                      : "bg-white border-line shadow-card hover:shadow-card-lg"
                   }`}
                 >
-                  {plan.cta.label}
-                </Link>
+                  {plan.highlight && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-accent text-white text-[11px] font-bold uppercase tracking-[0.06em] shadow-cta">
+                        <Sparkles className="h-3 w-3" />
+                        Cel mai popular
+                      </span>
+                    </div>
+                  )}
 
-                <ul className="space-y-2.5 flex-1">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-2.5 text-[13.5px]">
-                      <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-ink-2">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </FadeInOnScroll>
-          ))}
+                  <div className="mb-5">
+                    <h3 className="text-h3 font-gilroy text-ink mb-1.5">{plan.name}</h3>
+                    <p className="text-[13.5px] text-ink-3 leading-relaxed min-h-[40px]">
+                      {plan.description}
+                    </p>
+                  </div>
+
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="text-5xl font-bold text-ink font-gilroy tracking-tight">
+                        {price}
+                      </span>
+                      <span className="text-[14px] text-muted font-semibold">RON / lună</span>
+                    </div>
+                    <div className="mt-1.5 text-[12px] text-soft">
+                      {isFree
+                        ? "Gratuit pentru totdeauna"
+                        : billing === "yearly"
+                          ? `Plătit anual (${(plan.yearly * 12).toLocaleString("ro-RO")} RON/an) · + TVA`
+                          : "+ TVA · plătit lunar"}
+                    </div>
+                    {plan.overage !== undefined && (
+                      <div className="mt-2 inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-accent-soft/60 border border-accent-ring/20 text-[11.5px] font-semibold text-accent">
+                        + {plan.overage.toLocaleString("ro-RO", {
+                          minimumFractionDigits: 2,
+                          maximumFractionDigits: 2,
+                        })}{" "}
+                        RON / conversație suplimentară
+                      </div>
+                    )}
+                  </div>
+
+                  <Link
+                    href={plan.cta.href}
+                    className={`w-full text-center mb-7 ${
+                      plan.highlight ? "btn-primary" : "btn-secondary"
+                    }`}
+                  >
+                    {plan.cta.label}
+                  </Link>
+
+                  <ul className="space-y-2.5 flex-1">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-2.5 text-[13.5px]">
+                        <Check className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-ink-2">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeInOnScroll>
+            );
+          })}
         </div>
 
         {/* Enterprise tile */}

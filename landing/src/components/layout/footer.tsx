@@ -2,25 +2,25 @@ import Link from "next/link";
 import { BrandMark } from "@/components/ui/brand-mark";
 
 const productLinks = [
-  { label: "Funcționalități", href: "#features" },
-  { label: "Cum funcționează", href: "#how" },
-  { label: "Use cases", href: "#use-cases" },
-  { label: "Prețuri", href: "#pricing" },
-  { label: "Întrebări", href: "#faq" },
+  { label: "Funcționalități", href: "/#features" },
+  { label: "Cum funcționează", href: "/#how" },
+  { label: "Use cases", href: "/#use-cases" },
+  { label: "Prețuri", href: "/#pricing" },
+  { label: "Întrebări", href: "/#faq" },
 ];
 
 const companyLinks = [
-  { label: "Despre noi", href: "#" },
-  { label: "Contact", href: "#" },
-  { label: "Cariere", href: "#" },
-  { label: "Blog", href: "#" },
+  { label: "Despre noi", href: "/despre-noi" },
+  { label: "Contact", href: "/contact" },
+  { label: "Cariere", href: "/cariere" },
+  { label: "Blog", href: "/blog" },
 ];
 
 const resourceLinks = [
-  { label: "Centru de ajutor", href: "#" },
-  { label: "Documentație", href: "#" },
-  { label: "Status", href: "#" },
-  { label: "Schimbări", href: "#" },
+  { label: "Centru de ajutor", href: "/ajutor" },
+  { label: "Documentație", href: "/docs" },
+  { label: "Status", href: "/status" },
+  { label: "Schimbări", href: "/schimbari" },
 ];
 
 const legalLinks = [

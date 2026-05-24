@@ -1,14 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check } from "lucide-react";
 import { useCases, type ConversationTurn } from "@/data/use-cases";
 import { Mascot } from "@/components/ui/brand-mark";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
+import { team } from "@/data/team";
 
 export function UseCasesSection() {
   const [activeId, setActiveId] = useState(useCases[0].id);
   const active = useCases.find((u) => u.id === activeId) ?? useCases[0];
+
+  const [visibleCount, setVisibleCount] = useState(0);
+  const [showTyping, setShowTyping] = useState(false);
+
+  useEffect(() => {
+    setVisibleCount(0);
+    setShowTyping(false);
+
+    const timers: ReturnType<typeof setTimeout>[] = [];
+    let cursor = 400;
+
+    active.conversation.forEach((turn, i) => {
+      if (turn.from === "bot") {
+        timers.push(setTimeout(() => setShowTyping(true), cursor));
+        cursor += 900;
+        timers.push(
+          setTimeout(() => {
+            setShowTyping(false);
+            setVisibleCount(i + 1);
+          }, cursor)
+        );
+      } else {
+        timers.push(setTimeout(() => setVisibleCount(i + 1), cursor));
+      }
+      cursor += 1100;
+    });
+
+    return () => timers.forEach(clearTimeout);
+  }, [active.id, active.conversation]);
 
   return (
     <section id="use-cases" aria-labelledby="usecase-heading" className="section-y bg-white">
@@ -62,11 +92,10 @@ export function UseCasesSection() {
 
         {/* Panel */}
         <div
-          key={active.id}
           id={`usecase-panel-${active.id}`}
           role="tabpanel"
           aria-labelledby={`usecase-tab-${active.id}`}
-          className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center animate-fade-up"
+          className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center"
         >
           {/* Left: content */}
           <div>
@@ -103,15 +132,12 @@ export function UseCasesSection() {
                   "0 0 0 1px rgba(11,18,32,0.04), 0 24px 60px -16px rgba(11,18,32,0.12), 0 8px 24px -8px rgba(29,78,216,0.08)",
               }}
             >
-              {/* Accent stripe */}
-              <div className="h-1 bg-gradient-to-r from-accent via-primary-500 to-accent" />
-
               {/* Header */}
               <div className="px-5 py-4 border-b border-line bg-white flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="relative">
                     <div className="h-10 w-10 rounded-full bg-accent flex items-center justify-center shadow-[0_4px_12px_-2px_rgba(29,78,216,0.35)]">
-                      <Mascot size={24} bodyColor="#FFFFFF" eyeColor="#1F4ED8" />
+                      <Mascot size={24} bodyColor="#FFFFFF" eyeColor="#FFFFFF" />
                     </div>
                     <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-success border-2 border-white" />
                   </div>
@@ -125,13 +151,24 @@ export function UseCasesSection() {
                     </div>
                   </div>
                 </div>
-                <span className="text-base leading-none" aria-hidden="true">{active.icon}</span>
+                <div className="flex items-center -space-x-2" aria-label="Echipa Convia">
+                  {team.slice(0, 3).map((member) => (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      key={member.id}
+                      src={member.image}
+                      alt={member.name}
+                      className="h-7 w-7 rounded-full object-cover border-2 border-white shadow-sm"
+                    />
+                  ))}
+                </div>
               </div>
 
               <div className="bg-surface-2/60 px-5 py-5 space-y-2.5 min-h-[300px]">
-                {active.conversation.map((turn, i) => (
-                  <ConversationBubble key={i} turn={turn} />
+                {active.conversation.slice(0, visibleCount).map((turn, i) => (
+                  <ConversationBubble key={`${active.id}-${i}`} turn={turn} />
                 ))}
+                {showTyping && <TypingBubble key={`${active.id}-typing`} />}
               </div>
 
               {/* Footer */}
@@ -151,10 +188,12 @@ export function UseCasesSection() {
 function ConversationBubble({ turn }: { turn: ConversationTurn }) {
   const isUser = turn.from === "user";
   return (
-    <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
+    <div
+      className={`flex opacity-0 animate-message-in ${isUser ? "justify-end" : "justify-start"}`}
+    >
       {!isUser && (
         <div className="h-7 w-7 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mr-2 mt-0.5">
-          <Mascot size={18} bodyColor="#FFFFFF" eyeColor="#1F4ED8" />
+          <Mascot size={18} bodyColor="#FFFFFF" eyeColor="#FFFFFF" />
         </div>
       )}
       <div
@@ -166,6 +205,32 @@ function ConversationBubble({ turn }: { turn: ConversationTurn }) {
         style={{ borderRadius: isUser ? "18px 18px 4px 18px" : "18px 18px 18px 4px" }}
       >
         {turn.text}
+      </div>
+    </div>
+  );
+}
+
+function TypingBubble() {
+  return (
+    <div className="flex justify-start opacity-0 animate-message-in">
+      <div className="h-7 w-7 rounded-full bg-accent flex items-center justify-center flex-shrink-0 mr-2 mt-0.5">
+        <Mascot size={18} bodyColor="#FFFFFF" eyeColor="#FFFFFF" />
+      </div>
+      <div
+        className="bg-white border border-line shadow-sm px-3.5 py-3 flex items-center gap-1"
+        style={{ borderRadius: "18px 18px 18px 4px" }}
+        aria-label="Convia scrie un răspuns"
+      >
+        {[0, 160, 320].map((delay) => (
+          <span
+            key={delay}
+            className="h-1.5 w-1.5 rounded-full bg-ink-3/70"
+            style={{
+              animation: "convia-typing 1.2s ease-in-out infinite",
+              animationDelay: `${delay}ms`,
+            }}
+          />
+        ))}
       </div>
     </div>
   );

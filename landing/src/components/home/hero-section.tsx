@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, MessageCircle, Globe2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, MessageCircle, Globe2, Gift } from "lucide-react";
 import { Mascot } from "@/components/ui/brand-mark";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
@@ -16,7 +16,7 @@ export function HeroSection() {
             <Mascot
               size={84}
               bodyColor="#1D4ED8"
-              className="animate-float drop-shadow-[0_8px_24px_rgba(29,78,216,0.20)]"
+              className="drop-shadow-[0_8px_24px_rgba(29,78,216,0.20)]"
             />
           </div>
         </div>
@@ -71,12 +71,29 @@ export function HeroSection() {
           <span className="text-line-strong">·</span>
           <span>Suport în limba română</span>
         </div>
+
+        {/* Scarcity callout */}
+        <div className="mt-7 flex justify-center">
+          <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-2xl border border-accent-ring/40 bg-gradient-to-br from-accent-soft to-white shadow-card max-w-md text-left">
+            <div className="flex-shrink-0 h-9 w-9 rounded-xl bg-accent flex items-center justify-center shadow-[0_4px_10px_-2px_rgba(29,78,216,0.45)]">
+              <Gift className="h-4 w-4 text-white" strokeWidth={2.5} />
+            </div>
+            <div>
+              <div className="text-[10.5px] font-bold uppercase tracking-[0.08em] text-accent leading-none">
+                Bonus pentru primii 30 înscriși
+              </div>
+              <div className="text-[13px] font-bold text-ink mt-1 leading-tight">
+                1 an gratuit din pachetul Business · Lansăm iunie 2026
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Channel / trust strip */}
       <div className="container-x mt-16">
         <div className="mx-auto max-w-3xl flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[13px] text-ink-3">
-          <span className="overline text-soft">Funcționează pe</span>
+          <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-soft">Funcționează pe</span>
           <span className="inline-flex items-center gap-1.5 font-semibold">
             <WhatsAppIcon size={14} className="text-[#25D366]" />
             WhatsApp

@@ -6,11 +6,11 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { BrandMark } from "@/components/ui/brand-mark";
 
 const navLinks = [
-  { label: "Funcționalități", href: "#features" },
-  { label: "Cum funcționează", href: "#how" },
-  { label: "Use cases", href: "#use-cases" },
-  { label: "Prețuri", href: "#pricing" },
-  { label: "Întrebări", href: "#faq" },
+  { label: "Funcționalități", href: "/#features" },
+  { label: "Cum funcționează", href: "/#how" },
+  { label: "Use cases", href: "/#use-cases" },
+  { label: "Prețuri", href: "/#pricing" },
+  { label: "Întrebări", href: "/#faq" },
 ];
 
 export function Header() {
@@ -41,7 +41,7 @@ export function Header() {
     >
       <div className="container-x flex h-16 items-center justify-between">
         {/* Left: logo + nav */}
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-16">
           <Link href="/" aria-label="Convia — Pagina principală" className="flex items-center">
             <BrandMark size={36} />
           </Link>
@@ -56,7 +56,7 @@ export function Header() {
                 )}
                 <Link
                   href={link.href}
-                  className="text-[14px] font-bold text-ink-2 transition-colors hover:text-ink"
+                  className="text-[16px] font-bold text-ink-2 transition-colors hover:text-ink"
                 >
                   {link.label}
                 </Link>
@@ -69,7 +69,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="#signin"
-            className="hidden md:inline-flex text-[14px] font-bold text-ink hover:text-accent transition-colors"
+            className="hidden md:inline-flex text-[16px] font-bold text-ink hover:text-accent transition-colors"
           >
             Autentificare
           </Link>

@@ -1,0 +1,55 @@
+# Convia
+
+> Convia este o platformă AI românească pentru chatboți și asistenți virtuali, gândită pentru afaceri mici și mijlocii din România. Operatorul platformei este NORTEC BLANC S.R.L. (CUI 41773828). Lansare publică planificată în iunie 2026.
+
+Convia permite afacerilor din România să construiască asistenți AI care răspund clienților 24/7, pe site sau pe WhatsApp Business, în limba română nativă (cu diacritice, regionalisme și prescurtări). Platforma indexează informațiile clientului (site web, PDF-uri, fișiere Excel, text) și folosește retrieval-augmented generation (RAG) cu modele AI premium de la OpenAI și Anthropic pentru a genera răspunsuri ancorate în datele clientului — fără halucinații, cu transfer automat la operator uman când e nevoie.
+
+## Produs
+
+- [Platformă chatbot AI](https://convia.ro/): pagina principală cu prezentarea produsului, demo live, cazuri de utilizare, prețuri
+- [Cum funcționează](https://convia.ro/#how): cei 3 pași până la un bot live (5-10 minute)
+- [Funcționalități](https://convia.ro/#features): pe site și WhatsApp, răspunsuri 24/7, preluare umană, învățare din site/PDF/Excel, statistici
+- [Prețuri](https://convia.ro/#pricing): Gratuit (100 conv/lună), Business (149 RON/lună, 1.000 conv), Premium (349 RON/lună, 5.000 conv), plus opțiune Enterprise
+
+## Blog (articole de referință despre AI și automatizare)
+
+- [Ce este un chatbot AI și cum poate ajuta afacerea ta](https://convia.ro/blog/ce-este-un-chatbot-ai): definiție, diferențe față de bot-urile clasice cu butoane, contextul pieței din România (74,3% cumpărători online conform INS), cazuri de utilizare reale
+- [Cum funcționează asistenții AI pentru clienți](https://convia.ro/blog/cum-functioneaza-asistentii-ai): explicarea celor 3 ingrediente (LLM, bază de cunoștințe, RAG), demistificarea tehnologiei, ce poate și ce încă nu poate
+- [5 motive să automatizezi conversațiile cu clienții](https://convia.ro/blog/5-motive-sa-automatizezi-conversatiile): viteza de răspuns (78% cumpără de la primul respondent), așteptările 24/7 (74% conform Ringly), abandonul coșurilor (70,22% conform Baymard), reducerea costurilor (30-50% conform IBM), trecerea pe mobil (73,85% în RO conform Mordor Intelligence)
+
+## Companie
+
+- [Despre noi](https://convia.ro/despre-noi): misiune, valori, echipă, datele companiei (NORTEC BLANC S.R.L., CUI 41773828, J3/2526/2019, sediu Argeș)
+- [Contact](https://convia.ro/contact): canale (vânzări, suport, presă, juridic), email salut@convia.ro
+- [Cariere](https://convia.ro/cariere): aplicare spontană, valorile echipei
+
+## Conformitate și legal
+
+- [GDPR](https://convia.ro/gdpr): rol operator/împuternicit, DPA disponibil, listă sub-împuterniciți, măsuri tehnice și organizatorice (Art. 32), notificare incidente (72h ANSPDCP), drepturile persoanelor vizate
+- [Politica de confidențialitate](https://convia.ro/confidentialitate): ce date colectăm, cum le folosim, drepturi GDPR, contact ANSPDCP
+- [Termeni și condiții](https://convia.ro/termeni): condiții de utilizare a platformei, prețuri (RON), facturare, conformitate cu legislația română (OUG 34/2014, ANPC)
+- [Cookie-uri](https://convia.ro/cookies): cookie-uri esențiale, funcționale, de analiză
+
+## Resurse
+
+- [Centru de ajutor](https://convia.ro/ajutor): întrebări frecvente despre setup, facturare, GDPR, integrări
+- [Documentație](https://convia.ro/docs): integrare widget pe site cu code snippet, atribute disponibile, secțiuni planificate (WhatsApp API, REST API, Webhooks)
+- [Status](https://convia.ro/status): status live al serviciilor (API, widget, dashboard, integrări), istoric uptime
+- [Schimbări](https://convia.ro/schimbari): istoric de versiuni cu detalii pentru fiecare lansare
+
+## Date factuale despre Convia
+
+- Operator: NORTEC BLANC S.R.L., societate românească
+- CUI: 41773828
+- Reg. Comerțului: J3/2526/2019
+- Cod TVA: RO41773828
+- Sediu: Sat Ciofrângeni, Comuna Ciofrângeni, Nr. 257 bis, corp C16, Județ Argeș, România
+- Email contact: salut@convia.ro
+- Plan gratuit: 100 conversații/lună, fără card, fără termen
+- Suport: în limba română, prin email
+- Bonus de lansare: primii 30 înscriși primesc 1 an gratuit din pachetul Business la lansarea din iunie 2026
+- Modele AI folosite: OpenAI și Anthropic (cu DPA semnat)
+- Stocare date: Uniunea Europeană (Frankfurt)
+- Conformitate: GDPR, ANSPDCP (autoritatea română de protecția datelor)
+- Canale suportate: site web (widget JavaScript), WhatsApp Business API oficial
+- Limbă platformă: română nativă, cu suport pentru engleză

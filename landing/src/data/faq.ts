@@ -10,6 +10,11 @@ export const faqs: FaqItem[] = [
       "În medie, 5–10 minute. Te înregistrezi, încarci site-ul tău sau un document cu informațiile despre afacere, alegi unde îl pui (site, WhatsApp), copiezi un cod pe site și gata. Botul e live și răspunde clienților tăi.",
   },
   {
+    question: "Trebuie să știu cod ca să-l pun pe site? Pot să-mi ajute cineva?",
+    answer:
+      "Nu, nu ai nevoie de cunoștințe tehnice. Botul se adaugă cu o singură linie de cod copy-paste — funcționează pe WordPress, Shopify, Webflow, Gomag și orice site. Dacă nu te descurci sau pur și simplu nu vrei să te chinui, echipa noastră îl instalează gratuit pe site-ul tău. Tu ne dai accesul la admin (sau ne arăți unde să-l adăugăm), iar noi îl punem la treabă în 5 minute.",
+  },
+  {
     question: "Pot folosi propriile mele informații (site, PDF-uri, Excel)?",
     answer:
       "Da, asta e ideea principală. Convia învață din site-ul tău (introduci linkul și el citește singur), din PDF-uri (meniu, broșură, manual), din fișiere Excel (prețuri, stoc) sau direct din text pe care îl scrii tu. Răspunsurile sunt mereu pe baza informațiilor tale, nu invenții.",
@@ -27,7 +32,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Care e prețul? Sunt costuri ascunse?",
     answer:
-      "Nu. Avem 3 pachete fixe (Free, Start 29€/lună, Pro 89€/lună) plus TVA. Nu plătești per conversație, per mesaj sau per răspuns. Limita ta lunară e clar afișată. Dacă o depășești, te anunțăm — nu îți blocăm botul brusc.",
+      "Nu. Avem 3 pachete fixe: Gratuit (100 conv/lună, 0 RON), Business (1.000 conv/lună, 149 RON lunar sau 119 RON anual) și Premium (5.000 conv/lună, 349 RON lunar sau 279 RON anual). Toate sunt + TVA. Dacă depășești limita lunară, plătești doar pentru conversațiile suplimentare: 0,25 RON/conv pe Business și 0,12 RON/conv pe Premium. Nu îți blocăm botul, te anunțăm transparent.",
   },
   {
     question: "Datele clienților mei sunt în siguranță?",

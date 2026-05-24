@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Gift } from "lucide-react";
 import { Mascot } from "@/components/ui/brand-mark";
 import { FadeInOnScroll } from "@/components/ui/fade-in-on-scroll";
 
@@ -27,7 +27,7 @@ export function CtaSection() {
               <Mascot
                 size={64}
                 bodyColor="#1D4ED8"
-                className="animate-float drop-shadow-[0_8px_24px_rgba(29,78,216,0.20)]"
+                className="drop-shadow-[0_8px_24px_rgba(29,78,216,0.20)]"
               />
             </div>
             <h2
@@ -51,6 +51,23 @@ export function CtaSection() {
             </div>
             <div className="mt-5 text-[13.5px] font-semibold text-soft">
               14 zile gratuit · Fără card · Suport în română
+            </div>
+
+            {/* Scarcity callout */}
+            <div className="mt-7 flex justify-center">
+              <div className="inline-flex items-center gap-3 px-4 py-2.5 rounded-2xl border border-accent-ring/40 bg-white shadow-card max-w-md text-left">
+                <div className="flex-shrink-0 h-9 w-9 rounded-xl bg-accent flex items-center justify-center shadow-[0_4px_10px_-2px_rgba(29,78,216,0.45)]">
+                  <Gift className="h-4 w-4 text-white" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <div className="text-[10.5px] font-bold uppercase tracking-[0.08em] text-accent leading-none">
+                    Bonus pentru primii 30 înscriși
+                  </div>
+                  <div className="text-[13px] font-bold text-ink mt-1 leading-tight">
+                    1 an gratuit din pachetul Business · Lansăm iunie 2026
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </FadeInOnScroll>

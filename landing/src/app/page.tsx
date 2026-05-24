@@ -3,11 +3,13 @@ import { LiveDemoSection } from "@/components/home/live-demo-section";
 import { HowItWorksSection } from "@/components/home/how-it-works-section";
 import { UseCasesSection } from "@/components/home/use-cases-section";
 import { FeaturesSection } from "@/components/home/features-section";
+import { TeamTakeoverSection } from "@/components/home/team-takeover-section";
 import { ChannelsSection } from "@/components/home/channels-section";
 import { KnowledgeBaseSection } from "@/components/home/knowledge-base-section";
 import { PricingSection } from "@/components/home/pricing-section";
 import { TrustSection } from "@/components/home/trust-section";
 import { FaqSection } from "@/components/home/faq-section";
+import { RecentArticlesSection } from "@/components/home/recent-articles-section";
 import { CtaSection } from "@/components/home/cta-section";
 
 export default function HomePage() {
@@ -18,6 +20,7 @@ export default function HomePage() {
         <div className="divider" />
       </div>
       <LiveDemoSection />
+      <TeamTakeoverSection />
       <HowItWorksSection />
       <UseCasesSection />
       <FeaturesSection />
@@ -26,6 +29,7 @@ export default function HomePage() {
       <PricingSection />
       <TrustSection />
       <FaqSection />
+      <RecentArticlesSection />
       <CtaSection />
     </>
   );

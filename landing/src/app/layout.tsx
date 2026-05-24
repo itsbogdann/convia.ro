@@ -98,8 +98,8 @@ const softwareJsonLd = {
   offers: {
     "@type": "AggregateOffer",
     lowPrice: "0",
-    highPrice: "89",
-    priceCurrency: "EUR",
+    highPrice: "349",
+    priceCurrency: "RON",
     offerCount: "3",
   },
   provider: {
