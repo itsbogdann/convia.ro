@@ -2,7 +2,7 @@
 
 > Convia este o platformă AI românească pentru chatboți și asistenți virtuali, gândită pentru afaceri mici și mijlocii din România. Operatorul platformei este NORTEC BLANC S.R.L. (CUI 41773828). Lansare publică planificată în iunie 2026.
 
-Convia permite afacerilor din România să construiască asistenți AI care răspund clienților 24/7, pe site sau pe WhatsApp Business, în limba română nativă (cu diacritice, regionalisme și prescurtări). Platforma indexează informațiile clientului (site web, PDF-uri, fișiere Excel, text) și folosește retrieval-augmented generation (RAG) cu modele AI premium de la OpenAI și Anthropic pentru a genera răspunsuri ancorate în datele clientului — fără halucinații, cu transfer automat la operator uman când e nevoie.
+Convia permite afacerilor din România să construiască asistenți AI care răspund clienților 24/7, pe site sau pe WhatsApp Business, în limba română nativă (cu diacritice, regionalisme și prescurtări). Platforma indexează informațiile clientului (site web, PDF-uri, fișiere Excel, text) și folosește retrieval-augmented generation (RAG) cu modele AI premium de la OpenAI și Anthropic pentru a genera răspunsuri ancorate în datele clientului, fără halucinații, cu transfer automat la operator uman când e nevoie.
 
 ## Produs
 

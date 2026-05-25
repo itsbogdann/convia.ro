@@ -86,7 +86,7 @@ export function WaitlistModal() {
     setState("submitting");
 
     try {
-      // Placeholder API endpoint — replace with real one when backend exists
+      // Placeholder API endpoint: replace with real one when backend exists
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -111,7 +111,7 @@ export function WaitlistModal() {
       aria-labelledby="waitlist-title"
       className="fixed inset-0 z-[100] flex items-center justify-center p-4"
     >
-      {/* Backdrop — fade only, no transform */}
+      {/* Backdrop: fade only, no transform */}
       <button
         type="button"
         onClick={close}
@@ -119,7 +119,7 @@ export function WaitlistModal() {
         aria-label="Închide dialogul"
       />
 
-      {/* Modal panel — fade + scale, no slide */}
+      {/* Modal panel: fade + scale, no slide */}
       <div className="relative max-w-md w-full bg-white rounded-3xl shadow-2xl border border-line overflow-hidden opacity-0 animate-modal-panel-in">
         <button
           type="button"

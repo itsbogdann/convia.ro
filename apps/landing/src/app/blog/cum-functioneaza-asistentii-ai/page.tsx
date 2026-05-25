@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `/blog/${meta.slug}` },
   openGraph: {
     type: "article",
-    title: `${meta.title} · Convia`,
+    title: `Convia | ${meta.title}`,
     description: meta.description,
     url: `${SITE_URL}/blog/${meta.slug}`,
     locale: "ro_RO",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${meta.title} · Convia`,
+    title: `Convia | ${meta.title}`,
     description: meta.description,
   },
   keywords: [

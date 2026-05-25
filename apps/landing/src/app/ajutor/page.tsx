@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/ajutor" },
   openGraph: {
     type: "website",
-    title: "Centru de ajutor · Convia",
+    title: "Convia | Centru de ajutor",
     description:
       "Răspunsuri rapide la întrebări despre Convia. Scrie-ne dacă nu găsești ce cauți.",
     url: "/ajutor",

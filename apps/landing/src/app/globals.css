@@ -214,7 +214,7 @@ select:focus-visible {
 .btn-sm { height: 38px; padding: 0 16px; font-size: 14px; }
 .btn-lg { height: 54px; padding: 0 28px; font-size: 16px; }
 
-/* Gradient ink text — used for hero headlines */
+/* Gradient ink text: used for hero headlines */
 .gradient-ink {
   background: linear-gradient(180deg, #0B1220 0%, #334155 100%);
   -webkit-background-clip: text;
@@ -256,7 +256,7 @@ select:focus-visible {
   transform: translateY(-2px);
 }
 
-/* Glass-light — premium translucent card */
+/* Glass-light: premium translucent card */
 .glass-card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.65) 100%);
   border: 1px solid rgba(255, 255, 255, 0.8);
@@ -358,7 +358,7 @@ select:focus-visible {
   30% { transform: translateY(-3px); opacity: 1; }
 }
 
-/* "Mă gândesc" thinking wave — blue highlight sweeps across the text */
+/* "Mă gândesc" thinking wave: blue highlight sweeps across the text */
 @keyframes thinking-wave {
   0%   { background-position: 200% 50%; }
   100% { background-position: -100% 50%; }
@@ -407,7 +407,7 @@ select:focus-visible {
 }
 ::-webkit-scrollbar-thumb:hover { background: rgba(11, 18, 32, 0.28); }
 
-/* Blog article content — optimized for long-form reading */
+/* Blog article content: optimized for long-form reading */
 .article-content {
   color: var(--ink-2);
 }

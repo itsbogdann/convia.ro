@@ -25,7 +25,7 @@ export function PricingSection() {
             </h2>
             <p className="mt-5 text-body-lg text-ink-3">
               Începi gratuit. Plătești când vrei mai mult. Dacă depășești limita lunară, plătești
-              doar pentru conversațiile în plus — niciodată nu îți blocăm botul.
+              doar pentru conversațiile în plus. Niciodată nu îți blocăm botul.
             </p>
           </div>
         </FadeInOnScroll>

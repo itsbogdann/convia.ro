@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/cariere" },
   openGraph: {
     type: "website",
-    title: "Cariere · Convia",
+    title: "Convia | Cariere",
     description: "Vino în echipa Convia. Construim primul chatbot AI gândit pentru România.",
     url: "/cariere",
   },
@@ -119,7 +119,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Open positions — empty state */}
+      {/* Open positions: empty state */}
       <section className="section-y bg-soft">
         <div className="container-x">
           <FadeInOnScroll>
@@ -130,7 +130,7 @@ export default function CareersPage() {
               </h2>
               <p className="mt-5 text-body-lg text-ink-3">
                 Echipa noastră crește atent. Dacă te potrivești cu valorile noastre și ai un skill
-                puternic în engineering, produs, design sau marketing, scrie-ne — păstrăm CV-ul
+                puternic în engineering, produs, design sau marketing, scrie-ne. Păstrăm CV-ul
                 tău și te contactăm când apare ceva.
               </p>
             </div>

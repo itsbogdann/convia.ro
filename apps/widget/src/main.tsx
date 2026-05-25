@@ -421,7 +421,7 @@ if (botId) {
 
 // Listen for postMessage commands from parent frame (Bot Studio)
 const ALLOWED_ORIGINS = [
-  'http://localhost:7001',
+  'http://localhost:9001',
   'https://app.convia.ro',
   window.location.origin,
 ];

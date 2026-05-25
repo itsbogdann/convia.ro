@@ -36,9 +36,9 @@ const CANNED: CannedReply[] = [
     icon: Wallet,
     answer:
       "Avem 3 pachete, fără surprize:\n" +
-      "• Gratuit — 0 RON/lună (100 conversații)\n" +
-      "• Business — 149 RON/lună (1.000 conversații incluse)\n" +
-      "• Premium — 349 RON/lună (5.000 conversații incluse)\n\n" +
+      "• Gratuit: 0 RON/lună (100 conversații)\n" +
+      "• Business: 149 RON/lună (1.000 conversații incluse)\n" +
+      "• Premium: 349 RON/lună (5.000 conversații incluse)\n\n" +
       "Plata anuală: -20%. Dacă treci de limită, plătești doar conversațiile în plus: 0,25 RON/conv pe Business, 0,12 RON/conv pe Premium. Niciodată nu îți blocăm botul. Vezi detalii mai jos? 👇",
     followUps: ["Cât durează configurarea?", "E sigur cu datele mele?"],
   },
@@ -85,11 +85,11 @@ const FALLBACKS: string[] = [
   "Sunt în modul demo, așa că pot răspunde doar la subiecte generale despre Convia.\n\n" +
     "Vrei să mă pui la treabă pentru afacerea ta? Durează 5 minute să-ți configurezi propriul asistent. 🚀",
   "Pentru asta am nevoie de datele afacerii tale, pe care încă nu le am.\n\n" +
-    "Cere acces gratuit la Convia și încarcă-ți site-ul sau un PDF — gata să răspund corect în câteva minute. 👇",
+    "Cere acces gratuit la Convia și încarcă-ți site-ul sau un PDF, gata să răspund corect în câteva minute. 👇",
   "Aici răspund doar la subiecte demo. Pe site-ul tău, voi învăța din propriile tale informații (site, PDF, Excel) și voi răspunde clienților 24/7.\n\n" +
     "Fără cunoștințe tehnice. Fără card. 14 zile gratuit.",
   "În modul demo nu pot răspunde la lucruri specifice afacerii tale. Pentru asta, trebuie să mă pui pe site-ul tău cu informațiile tale.\n\n" +
-    "Cere setup gratuit și ne ocupăm noi de tot — îți facem cont și instalăm botul în locul tău. 🇷🇴",
+    "Cere setup gratuit și ne ocupăm noi de tot. Îți facem cont și instalăm botul în locul tău. 🇷🇴",
 ];
 
 const INITIAL_QUESTIONS = CANNED.map((c) => c.question);
@@ -189,7 +189,7 @@ export function LiveDemoSection() {
               <p className="mt-5 text-body-lg text-ink-3">
                 Așa va arăta și pe site-ul tău.
                 <br />
-                Apasă pe o întrebare sau scrie-i tu — răspunsurile sunt în timp real.
+                Apasă pe o întrebare sau scrie-i tu, răspunsurile sunt în timp real.
               </p>
 
               <div className="mt-10 relative grid grid-cols-2 max-w-md">
@@ -272,7 +272,7 @@ export function LiveDemoSection() {
                   height: 640,
                 }}
               >
-                {/* Header — team stack + subtle accent gradient */}
+                {/* Header: team stack + subtle accent gradient */}
                 <div
                   className="px-5 py-4 border-b border-line flex items-center justify-between"
                   style={{
@@ -283,21 +283,21 @@ export function LiveDemoSection() {
                   <div className="flex items-center gap-3">
                     {/* Avatar stack: 2 humans + Convia AI */}
                     <div className="relative flex items-center -space-x-2.5">
-                      {/* Human team member 1 — Andrei */}
+                      {/* Human team member 1: Andrei */}
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={team[0].image}
                         alt={team[0].name}
                         className="h-8 w-8 rounded-full border-2 border-white shadow-sm object-cover object-top"
                       />
-                      {/* Human team member 2 — Maria */}
+                      {/* Human team member 2: Maria */}
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={team[1].image}
                         alt={team[1].name}
                         className="h-8 w-8 rounded-full border-2 border-white shadow-sm object-cover object-top"
                       />
-                      {/* Convia AI — primary */}
+                      {/* Convia AI: primary */}
                       <div className="relative">
                         <div className="h-10 w-10 rounded-full bg-accent flex items-center justify-center shadow-[0_4px_12px_-2px_rgba(29,78,216,0.40)] border-2 border-white">
                           <Mascot size={22} bodyColor="#FFFFFF" eyeColor="#FFFFFF" />
@@ -369,7 +369,7 @@ export function LiveDemoSection() {
                             : "max-h-[52px] group-hover/drawer:max-h-[420px]"
                         }`}
                       >
-                        {/* Peek header — always visible */}
+                        {/* Peek header: always visible */}
                         <div className="h-[52px] px-5 flex items-center justify-between cursor-pointer select-none">
                           <span className="text-[10.5px] uppercase tracking-[0.08em] font-bold text-ink-3">
                             {hasInteracted ? "Mai vrei să afli" : "Sugestii populare"}
@@ -425,7 +425,7 @@ export function LiveDemoSection() {
                   </div>
                 </div>
 
-                {/* Input area — single pill with inset send button */}
+                {/* Input area: single pill with inset send button */}
                 <form
                   onSubmit={handleSubmit}
                   className="border-t border-line bg-white px-5 py-2.5"

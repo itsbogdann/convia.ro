@@ -26,7 +26,7 @@ export function HowItWorksSection() {
               3 pași până ai un asistent AI<br className="hidden sm:block" /> care răspunde clienților.
             </h2>
             <p className="mt-5 text-body-lg text-ink-3">
-              De la cont nou la bot live pe site — în mai puțin de 10 minute. Fără cod, fără
+              De la cont nou la bot live pe site, în mai puțin de 10 minute. Fără cod, fără
               configurări complicate.
             </p>
           </div>

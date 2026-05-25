@@ -8,7 +8,7 @@ export type BlogPostMeta = {
   date: string;
   /** Estimated reading time in minutes. */
   readingMinutes: number;
-  /** Topical tag — used as the eyebrow above the title and for filtering. */
+  /** Topical tag: used as the eyebrow above the title and for filtering. */
   category: string;
   author: {
     name: string;
@@ -17,7 +17,7 @@ export type BlogPostMeta = {
 };
 
 export const blogPosts: BlogPostMeta[] = [
-  // Ordered newest first — drives the featured-post slot on /blog and the
+  // Ordered newest first: drives the featured-post slot on /blog and the
   // related-posts sort order inside each article.
   {
     slug: "5-motive-sa-automatizezi-conversatiile",

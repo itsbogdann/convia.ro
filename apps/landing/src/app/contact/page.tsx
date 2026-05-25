@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   openGraph: {
     type: "website",
-    title: "Contact · Convia",
+    title: "Convia | Contact",
     description:
       "Scrie-ne. Echipa Convia răspunde în limba română, de obicei în mai puțin de 24 de ore.",
     url: "/contact",
@@ -75,7 +75,7 @@ export default function ContactPage() {
               </h1>
               <p className="mt-5 text-body-lg text-ink-3">
                 Echipa noastră răspunde în limba română, de obicei în mai puțin de 24 de ore. Scrie-ne
-                cum te ajută cel mai mult — pe email, în limba română, fără formalism.
+                cum te ajută cel mai mult, pe email, în limba română, fără formalism.
               </p>
             </div>
           </FadeInOnScroll>

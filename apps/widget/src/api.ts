@@ -1,6 +1,6 @@
 import type { AgentConfig, WidgetResponse, UserFields, ConversationListItem, KBSearchResult, UpdateEntry, FaqEntry } from './types';
 
-const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:7002/api';
+const DEFAULT_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:9002/api';
 
 class WidgetAPI {
   private apiUrl: string;

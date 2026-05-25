@@ -4,9 +4,9 @@
   "private": true,
   "description": "Convia dashboard — Next.js 15 + Tailwind 3 + Supabase",
   "scripts": {
-    "dev": "next dev --turbo --port 7001",
+    "dev": "next dev --turbo --port 9001",
     "build": "next build",
-    "start": "next start --port 7001",
+    "start": "next start --port 9001",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf .next node_modules .turbo"

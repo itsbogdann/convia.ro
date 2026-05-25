@@ -16,7 +16,7 @@ interface MeResponse {
   }>;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:7002/api";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:9002/api";
 
 async function fetchMe(token: string): Promise<MeResponse | null> {
   try {

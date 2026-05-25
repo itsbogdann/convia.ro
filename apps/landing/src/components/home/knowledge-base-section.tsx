@@ -25,7 +25,7 @@ export function KnowledgeBaseSection() {
             </h2>
             <p className="mt-5 text-body-lg text-ink-3">
               Botul răspunde doar pe baza informațiilor pe care i le dai. Nu inventează, nu
-              halucinează — știe exact ce vinzi, ce program ai și ce prețuri.
+              halucinează. Știe exact ce vinzi, ce program ai și ce prețuri.
             </p>
           </div>
         </FadeInOnScroll>
@@ -59,7 +59,7 @@ export function KnowledgeBaseSection() {
                 Răspunsuri pe baza datelor tale, nu invenții.
               </h3>
               <p className="text-body text-ink-3 mb-6 leading-relaxed">
-                Convia folosește tehnologie RAG (Retrieval-Augmented Generation) — caută informația
+                Convia folosește tehnologie RAG (Retrieval-Augmented Generation): caută informația
                 în documentele tale înainte să răspundă. Așa eviti situațiile când botul „inventează"
                 răspunsuri greșite.
               </p>
@@ -78,7 +78,7 @@ export function KnowledgeBaseSection() {
                   {
                     title: "Limită clară de cunoștințe",
                     description:
-                      "Când nu știe, spune „Nu am această informație” — nu inventează.",
+                      "Când nu știe, spune „Nu am această informație”, nu inventează.",
                   },
                 ].map((item) => (
                   <li key={item.title} className="flex items-start gap-3.5">

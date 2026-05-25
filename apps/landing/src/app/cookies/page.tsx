@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/cookies" },
   openGraph: {
     type: "website",
-    title: "Politica de cookie-uri · Convia",
+    title: "Convia | Politica de cookie-uri",
     description:
       "Cum folosește Convia cookie-urile și tehnologiile similare pe site, dashboard și widgetul de chat.",
     url: "/cookies",
@@ -134,7 +134,7 @@ export default function CookiesPage() {
                 <td>
                   <code>_ga</code>, <code>_ga_*</code>
                 </td>
-                <td>Google Analytics — statistici agregate de utilizare</td>
+                <td>Google Analytics: statistici agregate de utilizare</td>
                 <td>până la 2 ani</td>
               </tr>
             </tbody>
@@ -148,10 +148,10 @@ export default function CookiesPage() {
           </p>
           <ul>
             <li>
-              <code>convia_session_id</code> — Identifică sesiunea vizitatorului
+              <code>convia_session_id</code>: Identifică sesiunea vizitatorului
             </li>
             <li>
-              <code>convia_conversation_id</code> — Asociază sesiunea cu conversația activă
+              <code>convia_conversation_id</code>: Asociază sesiunea cu conversația activă
             </li>
           </ul>
           <p>
@@ -166,11 +166,11 @@ export default function CookiesPage() {
           </p>
           <ul>
             <li>
-              <strong>Stripe</strong> — Cookie-uri pentru detectarea fraudelor și procesarea
+              <strong>Stripe</strong>: Cookie-uri pentru detectarea fraudelor și procesarea
               plăților
             </li>
             <li>
-              <strong>Google Analytics</strong> — Statistici agregate de utilizare a site-ului
+              <strong>Google Analytics</strong>: Statistici agregate de utilizare a site-ului
             </li>
           </ul>
           <p>

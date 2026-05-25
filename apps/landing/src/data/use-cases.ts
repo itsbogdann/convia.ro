@@ -44,7 +44,7 @@ export const useCases: UseCase[] = [
     id: "restaurant",
     industry: "Restaurante & Cafenele",
     icon: "🍝",
-    headline: "Rezervări, comenzi și răspunsuri despre meniu — non-stop",
+    headline: "Rezervări, comenzi și răspunsuri despre meniu, non-stop",
     description:
       "Convia preia rezervările, răspunde la întrebări despre meniu, alergeni și program, și poate prelua comenzi pentru delivery sau take-away.",
     examples: [
@@ -60,7 +60,7 @@ export const useCases: UseCase[] = [
       },
       {
         from: "bot",
-        text: "Mulțumesc! Pentru sâmbătă 25 mai, ora 20:00, 4 persoane — am o masă disponibilă în sala principală, lângă fereastră. Confirm rezervarea? 🍽️",
+        text: "Mulțumesc! Pentru sâmbătă 25 mai, ora 20:00, 4 persoane, am o masă disponibilă în sala principală, lângă fereastră. Confirm rezervarea? 🍽️",
       },
       {
         from: "user",
@@ -78,7 +78,7 @@ export const useCases: UseCase[] = [
     icon: "🛍️",
     headline: "Reduce coșurile abandonate și suportul repetitiv",
     description:
-      "Convia răspunde la întrebări despre produse, status comandă, livrare și retur — și recomandă produse pe baza preferințelor clientului.",
+      "Convia răspunde la întrebări despre produse, status comandă, livrare și retur, și recomandă produse pe baza preferințelor clientului.",
     examples: [
       "Urmărește statusul comenzilor în timp real",
       "Recomandă produse după nevoia clientului",

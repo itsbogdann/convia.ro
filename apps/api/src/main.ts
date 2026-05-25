@@ -58,8 +58,8 @@ async function bootstrap() {
   // Global response interceptor
   app.useGlobalInterceptors(new TransformInterceptor());
 
-  // Start server (Convia API runs on 7002 by default; landing 7000, web 7001, widget 7003)
-  const port = configService.get<number>('app.port') || 7002;
+  // Start server (Convia API runs on 9002 by default; landing 9000, web 9001, widget 9003)
+  const port = configService.get<number>('app.port') || 9002;
 
   // Swagger documentation (disabled in production)
   const nodeEnv = configService.get('app.env') || process.env.NODE_ENV;

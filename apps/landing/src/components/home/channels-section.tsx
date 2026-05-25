@@ -47,7 +47,7 @@ export function ChannelsSection() {
                 </p>
                 <ul className="mt-5 space-y-2.5">
                   {[
-                    "Conexiune oficială Meta — nu pierzi conturile",
+                    "Conexiune oficială Meta, nu pierzi conturile",
                     "Răspunsuri în limba română, cu diacritice",
                     "Trimite imagini, locație, butoane",
                     "Funcționează 24/7, inclusiv sărbători",
@@ -96,7 +96,7 @@ export function ChannelsSection() {
                 </h3>
                 <p className="mt-3 text-body-sm text-ink-3">
                   Adaugi o singură linie de cod și widget-ul apare în colțul site-ului. Funcționează
-                  pe WordPress, Shopify, Webflow, Gomag, custom — orice site web.
+                  pe WordPress, Shopify, Webflow, Gomag, custom: orice site web.
                 </p>
                 <ul className="mt-5 space-y-2.5">
                   {[
@@ -149,7 +149,7 @@ export function ChannelsSection() {
               <ArrowRight className="h-4 w-4" />
             </Link>
             <span className="text-[13px] text-soft">
-              Funcționează cu WordPress, Shopify, Webflow, Gomag, custom — orice site.
+              Funcționează cu WordPress, Shopify, Webflow, Gomag, custom: orice site.
             </span>
           </div>
         </FadeInOnScroll>

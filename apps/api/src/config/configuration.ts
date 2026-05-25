@@ -1,13 +1,13 @@
 export default () => ({
   // Application
   app: {
-    port: parseInt(process.env.API_PORT || '7002', 10),
+    port: parseInt(process.env.API_PORT || '9002', 10),
     env: process.env.NODE_ENV || 'development',
-    // Convia port layout: landing 7000, web 7001, api 7002, widget 7003
+    // Convia port layout: landing 9000, web 9001, api 9002, widget 9003
     corsOrigins: process.env.CORS_ORIGINS?.split(',') || [
-      'http://localhost:7000',
-      'http://localhost:7001',
-      'http://localhost:7003',
+      'http://localhost:9000',
+      'http://localhost:9001',
+      'http://localhost:9003',
     ],
   },
 
@@ -78,10 +78,10 @@ export default () => ({
     webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
     successUrl:
       process.env.STRIPE_SUCCESS_URL ||
-      'http://localhost:7001/settings/billing?success=true',
+      'http://localhost:9001/settings/billing?success=true',
     cancelUrl:
       process.env.STRIPE_CANCEL_URL ||
-      'http://localhost:7001/settings/billing?canceled=true',
+      'http://localhost:9001/settings/billing?canceled=true',
     // Convia plan price IDs (created by the Stripe setup script)
     prices: {
       businessMonthly: process.env.STRIPE_PRICE_BUSINESS_MONTHLY,
@@ -116,9 +116,9 @@ export default () => ({
 
   // App URLs (for emails, redirects)
   urls: {
-    landing: process.env.NEXT_PUBLIC_LANDING_URL || 'http://localhost:7000',
-    web: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:7001',
-    api: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:7002',
-    widget: process.env.NEXT_PUBLIC_WIDGET_URL || 'http://localhost:7003',
+    landing: process.env.NEXT_PUBLIC_LANDING_URL || 'http://localhost:9000',
+    web: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:9001',
+    api: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:9002',
+    widget: process.env.NEXT_PUBLIC_WIDGET_URL || 'http://localhost:9003',
   },
 });

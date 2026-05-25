@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/gdpr" },
   openGraph: {
     type: "website",
-    title: "Conformitate GDPR · Convia",
+    title: "Convia | Conformitate GDPR",
     description:
       "Hub de conformitate GDPR: DPA, sub-împuterniciți, măsuri de securitate, drepturile persoanelor vizate.",
     url: "/gdpr",
@@ -138,7 +138,7 @@ export default function GdprPage() {
                   <strong>Vercel</strong>
                 </td>
                 <td>Găzduire frontend (dashboard, site, widget)</td>
-                <td>UE (Frankfurt) — regiune principală</td>
+                <td>UE (Frankfurt), regiune principală</td>
               </tr>
             </tbody>
           </table>
@@ -155,10 +155,10 @@ export default function GdprPage() {
           <h3>4.1 Securitate tehnică</h3>
           <ul>
             <li>
-              <strong>Criptare în repaus</strong> — AES-256 pentru baza de date și fișierele stocate
+              <strong>Criptare în repaus</strong>: AES-256 pentru baza de date și fișierele stocate
             </li>
             <li>
-              <strong>Criptare în tranzit</strong> — TLS 1.3 obligatoriu pentru toate conexiunile
+              <strong>Criptare în tranzit</strong>: TLS 1.3 obligatoriu pentru toate conexiunile
             </li>
             <li>
               <strong>Hash bcrypt</strong> pentru parolele utilizatorilor, cu factor adaptiv
@@ -184,11 +184,11 @@ export default function GdprPage() {
           <h3>4.2 Măsuri organizatorice</h3>
           <ul>
             <li>
-              <strong>Control acces bazat pe roluri (RBAC)</strong> — Owner, Admin, Developer, Agent
+              <strong>Control acces bazat pe roluri (RBAC)</strong>: Owner, Admin, Developer, Agent
               uman, fiecare cu permisiuni granulare
             </li>
             <li>
-              <strong>Principiul „nevoia de a cunoaște”</strong> — accesul angajaților la datele
+              <strong>Principiul „nevoia de a cunoaște”</strong>: accesul angajaților la datele
               clienților este limitat la situațiile strict necesare (suport, debug, mentenanță)
             </li>
             <li>
@@ -219,12 +219,12 @@ export default function GdprPage() {
           </p>
           <ul>
             <li>
-              <strong>Pentru datele contului tău</strong> (unde noi suntem operator) — te poți
+              <strong>Pentru datele contului tău</strong> (unde noi suntem operator): te poți
               adresa direct la <a href="mailto:salut@convia.ro">salut@convia.ro</a>. Răspundem în
               maximum 30 de zile.
             </li>
             <li>
-              <strong>Pentru datele utilizatorilor tăi finali</strong> (unde noi suntem împuternicit) —
+              <strong>Pentru datele utilizatorilor tăi finali</strong> (unde noi suntem împuternicit):
               cererile se adresează ție, în calitate de operator. Te asistăm tehnic să le
               îndeplinești: exportul datelor unei persoane, ștergerea unei conversații sau
               restricționarea prelucrării sunt disponibile direct din dashboard.
@@ -233,19 +233,19 @@ export default function GdprPage() {
           <p>Drepturile incluse:</p>
           <ul>
             <li>
-              <strong>Acces</strong> (Art. 15) — copie a datelor personale prelucrate
+              <strong>Acces</strong> (Art. 15): copie a datelor personale prelucrate
             </li>
             <li>
-              <strong>Rectificare</strong> (Art. 16) — corectarea datelor inexacte
+              <strong>Rectificare</strong> (Art. 16): corectarea datelor inexacte
             </li>
             <li>
-              <strong>Ștergere</strong> (Art. 17) — „dreptul de a fi uitat”
+              <strong>Ștergere</strong> (Art. 17): „dreptul de a fi uitat”
             </li>
             <li>
-              <strong>Restricționare</strong> (Art. 18) — limitarea prelucrării
+              <strong>Restricționare</strong> (Art. 18): limitarea prelucrării
             </li>
             <li>
-              <strong>Portabilitate</strong> (Art. 20) — date într-un format structurat,
+              <strong>Portabilitate</strong> (Art. 20): date într-un format structurat,
               prelucrabil automat
             </li>
             <li>
@@ -255,7 +255,7 @@ export default function GdprPage() {
               <strong>Retragerea consimțământului</strong> (Art. 7)
             </li>
             <li>
-              <strong>Plângere la autoritatea de supraveghere</strong> (Art. 77) — ANSPDCP în
+              <strong>Plângere la autoritatea de supraveghere</strong> (Art. 77): ANSPDCP în
               România
             </li>
           </ul>
@@ -285,25 +285,25 @@ export default function GdprPage() {
           <p>În cazul unui incident de securitate care implică date personale:</p>
           <ul>
             <li>
-              <strong>Identificare și conținere</strong> — Echipa noastră investighează imediat și
+              <strong>Identificare și conținere</strong>: Echipa noastră investighează imediat și
               limitează impactul
             </li>
             <li>
-              <strong>Notificare ANSPDCP</strong> — Dacă suntem operator și incidentul prezintă risc
+              <strong>Notificare ANSPDCP</strong>: Dacă suntem operator și incidentul prezintă risc
               pentru drepturile persoanelor vizate, notificăm ANSPDCP în maximum{" "}
               <strong>72 de ore</strong> (Art. 33)
             </li>
             <li>
-              <strong>Notificarea clienților</strong> — Dacă suntem împuternicit, te notificăm fără
+              <strong>Notificarea clienților</strong>: Dacă suntem împuternicit, te notificăm fără
               întârziere nejustificată, oferind toate detaliile necesare pentru ca tu, ca operator,
               să-ți îndeplinești la rândul tău obligațiile de raportare
             </li>
             <li>
-              <strong>Notificarea persoanelor vizate</strong> — Atunci când este obligatorie
+              <strong>Notificarea persoanelor vizate</strong>: Atunci când este obligatorie
               conform Art. 34, transmitem comunicări clare și acționabile
             </li>
             <li>
-              <strong>Documentare</strong> — Păstrăm înregistrări detaliate ale incidentelor și ale
+              <strong>Documentare</strong>: Păstrăm înregistrări detaliate ale incidentelor și ale
               măsurilor luate, conform Art. 33(5)
             </li>
           </ul>
@@ -341,12 +341,12 @@ export default function GdprPage() {
 
           <h2>10. Contact pentru protecția datelor</h2>
           <p>
-            Pentru orice cerere legată de GDPR — DPA, cereri din partea persoanelor vizate,
-            întrebări despre sub-împuterniciți sau notificarea unui incident — te rugăm să ne
+            Pentru orice cerere legată de GDPR (DPA, cereri din partea persoanelor vizate,
+            întrebări despre sub-împuterniciți sau notificarea unui incident), te rugăm să ne
             contactezi:
           </p>
           <p>
-            <strong>NORTEC BLANC S.R.L. — operator Convia</strong>
+            <strong>NORTEC BLANC S.R.L., operator Convia</strong>
             <br />
             Sediul social: Sat Ciofrângeni, Comuna Ciofrângeni, Nr. 257 bis, corp C16, Județ Argeș,
             România

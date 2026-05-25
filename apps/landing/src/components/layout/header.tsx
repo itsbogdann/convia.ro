@@ -42,7 +42,7 @@ export function Header() {
       <div className="container-x flex h-16 items-center justify-between">
         {/* Left: logo + nav */}
         <div className="flex items-center gap-16">
-          <Link href="/" aria-label="Convia — Pagina principală" className="flex items-center">
+          <Link href="/" aria-label="Convia | Pagina principală" className="flex items-center">
             <BrandMark size={36} />
           </Link>
           <nav aria-label="Navigare principală" className="hidden lg:flex items-center gap-5">

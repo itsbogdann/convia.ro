@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/confidentialitate" },
   openGraph: {
     type: "website",
-    title: "Politica de confidențialitate · Convia",
+    title: "Convia | Politica de confidențialitate",
     description:
       "Cum colectează, folosește, stochează și protejează Convia datele cu caracter personal. Conform GDPR.",
     url: "/confidentialitate",
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
             <li>Credențiale de autentificare (gestionate securizat)</li>
             <li>Informații despre echipa ta și membrii ei</li>
             <li>
-              Date de facturare (procesate și stocate de Stripe — nu stocăm numerele complete de
+              Date de facturare (procesate și stocate de Stripe, nu stocăm numerele complete de
               card)
             </li>
           </ul>
@@ -112,19 +112,19 @@ export default function PrivacyPage() {
           <p>Prelucrăm datele tale doar atunci când avem un temei legal valid:</p>
           <ul>
             <li>
-              <strong>Executarea contractului</strong> (Art. 6(1)(b)) — pentru a furniza Serviciul,
+              <strong>Executarea contractului</strong> (Art. 6(1)(b)): pentru a furniza Serviciul,
               a-ți crea contul și a procesa abonamentele;
             </li>
             <li>
-              <strong>Obligație legală</strong> (Art. 6(1)(c)) — pentru contabilitate, facturare și
+              <strong>Obligație legală</strong> (Art. 6(1)(c)): pentru contabilitate, facturare și
               raportare fiscală conform legislației române;
             </li>
             <li>
-              <strong>Interes legitim</strong> (Art. 6(1)(f)) — pentru securitatea Serviciului,
+              <strong>Interes legitim</strong> (Art. 6(1)(f)): pentru securitatea Serviciului,
               prevenirea fraudelor, statistici interne agregate și îmbunătățirea funcționalităților;
             </li>
             <li>
-              <strong>Consimțământ</strong> (Art. 6(1)(a)) — pentru cookie-uri ne-esențiale, marketing
+              <strong>Consimțământ</strong> (Art. 6(1)(a)): pentru cookie-uri ne-esențiale, marketing
               prin email sau alte situații specifice. Poți retrage consimțământul oricând.
             </li>
           </ul>
@@ -136,21 +136,21 @@ export default function PrivacyPage() {
           <p>Folosim servicii terțe de încredere pentru a opera platforma:</p>
           <ul>
             <li>
-              <strong>Stripe</strong> — Procesare plăți și gestionare abonamente
+              <strong>Stripe</strong>: Procesare plăți și gestionare abonamente
             </li>
             <li>
-              <strong>Furnizori AI (OpenAI, Anthropic)</strong> — Generarea răspunsurilor AI
+              <strong>Furnizori AI (OpenAI, Anthropic)</strong>: Generarea răspunsurilor AI
             </li>
             <li>
-              <strong>Infrastructură cloud</strong> — Autentificare, găzduire baze de date și
+              <strong>Infrastructură cloud</strong>: Autentificare, găzduire baze de date și
               mesagerie în timp real
             </li>
             <li>
-              <strong>Furnizor email tranzacțional</strong> — Trimitere emailuri (confirmări,
+              <strong>Furnizor email tranzacțional</strong>: Trimitere emailuri (confirmări,
               alerte, notificări, facturi)
             </li>
             <li>
-              <strong>Pinecone</strong> — Vector store pentru baza de cunoștințe (RAG)
+              <strong>Pinecone</strong>: Vector store pentru baza de cunoștințe (RAG)
             </li>
           </ul>
           <p>
@@ -176,26 +176,26 @@ export default function PrivacyPage() {
           <p>Datele tale sunt protejate prin măsuri de securitate la standarde industriale:</p>
           <ul>
             <li>
-              <strong>Criptare în repaus</strong> — Datele din baza noastră sunt criptate cu AES-256
+              <strong>Criptare în repaus</strong>: Datele din baza noastră sunt criptate cu AES-256
             </li>
             <li>
-              <strong>Criptare în tranzit</strong> — Toate conexiunile folosesc TLS 1.3
+              <strong>Criptare în tranzit</strong>: Toate conexiunile folosesc TLS 1.3
             </li>
             <li>
-              <strong>Hash-uri pentru parole</strong> — Parolele sunt hash-uite cu bcrypt
+              <strong>Hash-uri pentru parole</strong>: Parolele sunt hash-uite cu bcrypt
             </li>
             <li>
-              <strong>Row-Level Security</strong> — Politicile DB asigură că utilizatorii pot accesa
+              <strong>Row-Level Security</strong>: Politicile DB asigură că utilizatorii pot accesa
               doar datele din contul lor
             </li>
             <li>
-              <strong>Rotația automată a cheilor</strong> — Cheile de criptare sunt rotite periodic
+              <strong>Rotația automată a cheilor</strong>: Cheile de criptare sunt rotite periodic
             </li>
             <li>
-              <strong>Rate limiting</strong> — Limitele API protejează împotriva abuzurilor
+              <strong>Rate limiting</strong>: Limitele API protejează împotriva abuzurilor
             </li>
             <li>
-              <strong>Control acces bazat pe roluri (RBAC)</strong> — Permisiuni granulare la nivel
+              <strong>Control acces bazat pe roluri (RBAC)</strong>: Permisiuni granulare la nivel
               de cont și echipă
             </li>
           </ul>
@@ -208,23 +208,23 @@ export default function PrivacyPage() {
           <h2>6. Perioada de păstrare</h2>
           <ul>
             <li>
-              <strong>Date de cont</strong> — Păstrate pe durata contului. Șterse în maximum 30 de
+              <strong>Date de cont</strong>: Păstrate pe durata contului. Șterse în maximum 30 de
               zile de la închiderea contului.
             </li>
             <li>
-              <strong>Date din conversații</strong> — Păstrate pe durata abonamentului. Poți șterge
+              <strong>Date din conversații</strong>: Păstrate pe durata abonamentului. Poți șterge
               conversații individuale oricând.
             </li>
             <li>
-              <strong>Conținutul bazei de cunoștințe</strong> — Păstrat până când ștergi sursa sau
+              <strong>Conținutul bazei de cunoștințe</strong>: Păstrat până când ștergi sursa sau
               îți închizi contul.
             </li>
             <li>
-              <strong>Loguri de utilizare</strong> — Păstrate până la 12 luni, pentru statistici și
+              <strong>Loguri de utilizare</strong>: Păstrate până la 12 luni, pentru statistici și
               securitate.
             </li>
             <li>
-              <strong>Documente fiscale și de facturare</strong> — Păstrate conform legislației
+              <strong>Documente fiscale și de facturare</strong>: Păstrate conform legislației
               române (în general, 10 ani).
             </li>
           </ul>
@@ -233,28 +233,28 @@ export default function PrivacyPage() {
           <p>În calitate de persoană vizată, ai următoarele drepturi:</p>
           <ul>
             <li>
-              <strong>Acces</strong> — Să soliciți o copie a datelor personale pe care le deținem
+              <strong>Acces</strong>: Să soliciți o copie a datelor personale pe care le deținem
               despre tine
             </li>
             <li>
-              <strong>Rectificare</strong> — Să corectezi date inexacte sau incomplete
+              <strong>Rectificare</strong>: Să corectezi date inexacte sau incomplete
             </li>
             <li>
-              <strong>Ștergere („dreptul de a fi uitat”)</strong> — Să ceri ștergerea datelor
+              <strong>Ștergere („dreptul de a fi uitat”)</strong>: Să ceri ștergerea datelor
               personale
             </li>
             <li>
-              <strong>Portabilitate</strong> — Să primești datele într-un format structurat,
+              <strong>Portabilitate</strong>: Să primești datele într-un format structurat,
               prelucrabil automat
             </li>
             <li>
-              <strong>Restricționarea prelucrării</strong> — Să ne ceri să limităm prelucrarea
+              <strong>Restricționarea prelucrării</strong>: Să ne ceri să limităm prelucrarea
             </li>
             <li>
-              <strong>Opoziție</strong> — Să te opui anumitor tipuri de prelucrare
+              <strong>Opoziție</strong>: Să te opui anumitor tipuri de prelucrare
             </li>
             <li>
-              <strong>Retragerea consimțământului</strong> — Când prelucrarea se bazează pe
+              <strong>Retragerea consimțământului</strong>: Când prelucrarea se bazează pe
               consimțământ, îl poți retrage oricând
             </li>
           </ul>

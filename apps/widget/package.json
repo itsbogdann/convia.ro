@@ -5,7 +5,7 @@
   "description": "Convia embeddable chat widget — built with Vite + React",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 7003",
+    "dev": "vite --port 9003",
     "build": "tsc && vite build && vite build --config vite.embed.config.ts",
     "build:embed": "vite build --config vite.embed.config.ts",
     "preview": "vite preview",

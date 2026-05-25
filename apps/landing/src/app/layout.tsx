@@ -10,8 +10,8 @@ const OG_IMAGE = "/og.png";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Convia — Primul chatbot AI pentru afaceri din România",
-    template: "%s · Convia",
+    default: "Convia | Primul chatbot AI pentru afaceri din România",
+    template: "Convia | %s",
   },
   description:
     "Răspunde clienților tăi 24/7 pe site și pe WhatsApp. Construiești un asistent AI pentru afacerea ta în 5 minute. Fără cod, fără efort. 100% românesc.",
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     locale: "ro_RO",
     siteName: "Convia",
     url: SITE_URL,
-    title: "Convia — Primul chatbot AI pentru afaceri din România",
+    title: "Convia | Primul chatbot AI pentru afaceri din România",
     description:
       "Răspunde clienților tăi 24/7 pe site și pe WhatsApp. Construiești un asistent AI pentru afacerea ta în 5 minute. Fără cod, fără efort.",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Convia — Chatbot AI pentru afaceri din România" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Convia | Chatbot AI pentru afaceri din România" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Convia — Primul chatbot AI pentru afaceri din România",
+    title: "Convia | Primul chatbot AI pentru afaceri din România",
     description:
       "Răspunde clienților tăi 24/7 pe site și pe WhatsApp. Fără cod, fără efort.",
     images: [OG_IMAGE],

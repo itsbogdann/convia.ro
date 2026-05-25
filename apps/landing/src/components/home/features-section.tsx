@@ -66,7 +66,7 @@ export function FeaturesSection() {
             <FeatureCard
               icon={BookOpen}
               title="Învață cu informațiile tale"
-              description="Site, PDF, Excel, text — Convia citește și răspunde pe baza datelor tale. Niciodată nu inventează."
+              description="Site, PDF, Excel, text. Convia citește și răspunde pe baza datelor tale. Niciodată nu inventează."
               visual={<KnowledgeVisual />}
               wide
             />

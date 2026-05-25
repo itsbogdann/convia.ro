@@ -15,7 +15,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 7003,
+    port: 9003,
     cors: true,
     headers: {
       'Content-Security-Policy': "frame-ancestors *",

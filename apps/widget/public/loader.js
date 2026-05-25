@@ -21,7 +21,7 @@
   var isLocal = scriptOrigin.indexOf('localhost') !== -1 || scriptOrigin.indexOf('127.0.0.1') !== -1;
 
   var WIDGET_URL = isLocal ? scriptOrigin + '/embed.js' : 'https://widget.convia.ro/embed.js';
-  var API_URL = isLocal ? 'http://localhost:7002/api' : 'https://api.convia.ro';
+  var API_URL = isLocal ? 'http://localhost:9002/api' : 'https://api.convia.ro';
 
   // Queue for commands called before widget loads
   var commandQueue = [];

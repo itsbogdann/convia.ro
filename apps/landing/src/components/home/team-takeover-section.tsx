@@ -26,8 +26,8 @@ export function TeamTakeoverSection() {
                 Echipa ta preia<br />când e nevoie.
               </h2>
               <p className="mt-5 text-body-lg text-ink-3">
-                Botul răspunde la 80% din întrebări automat. Pentru restul, colegii tăi sunt acolo
-                — cu acces la tot istoricul conversațiilor și un inbox comun.
+                Botul răspunde la 80% din întrebări automat. Pentru restul, colegii tăi sunt acolo,
+                cu acces la tot istoricul conversațiilor și un inbox comun.
               </p>
 
               <ul className="mt-8 space-y-4">
@@ -48,7 +48,7 @@ export function TeamTakeoverSection() {
                     icon: Bell,
                     title: "Notificări instant",
                     description:
-                      "Email, WhatsApp sau push pe mobil — vezi imediat când e nevoie de tine.",
+                      "Email, WhatsApp sau push pe mobil. Vezi imediat când e nevoie de tine.",
                   },
                 ].map((item) => {
                   const Icon = item.icon;

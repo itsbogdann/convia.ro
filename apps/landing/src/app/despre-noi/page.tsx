@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/despre-noi" },
   openGraph: {
     type: "website",
-    title: "Despre noi · Convia",
+    title: "Convia | Despre noi",
     description:
       "Cine suntem și de ce am construit Convia: primul chatbot AI gândit pentru afaceri din România.",
     url: "/despre-noi",
@@ -37,7 +37,7 @@ const values = [
     icon: MessageSquareHeart,
     title: "Limba română contează",
     description:
-      "Diacritice, regionalisme, prescurtări, formule de politețe. Tot ce face conversația să sune natural — nu o traducere stângace de pe engleză.",
+      "Diacritice, regionalisme, prescurtări, formule de politețe. Tot ce face conversația să sune natural, nu o traducere stângace de pe engleză.",
   },
   {
     icon: ShieldCheck,
@@ -109,7 +109,7 @@ export default function AboutPage() {
             <FadeInOnScroll className="lg:col-span-7" delay={100}>
               <div className="space-y-5 text-body text-ink-3 leading-relaxed">
                 <p>
-                  Lucrăm cu antreprenori români de ani buni — patroni de hoteluri, magazine online,
+                  Lucrăm cu antreprenori români de ani buni: patroni de hoteluri, magazine online,
                   saloane, restaurante. Le vedeam aceeași problemă: clienții scriu pe site sau pe
                   WhatsApp la ore imposibile și nimeni nu apucă să răspundă. Comenzi pierdute,
                   rezervări care merg la concurență, întrebări simple care se repetă de 50 de ori
@@ -187,9 +187,9 @@ export default function AboutPage() {
             <p className="mt-6 text-center text-[13px] font-semibold text-ink-3">
               <span className="text-success">●</span>{" "}
               <span className="text-ink-2">5 colegi</span>{" "}
-              <span className="text-soft">· angajăm constant</span>{" "}
+              <span className="text-soft">· angajăm constant ·</span>{" "}
               <Link href="/cariere" className="text-accent font-bold hover:underline">
-                — vezi pozițiile deschise
+                vezi pozițiile deschise
               </Link>
             </p>
           </FadeInOnScroll>

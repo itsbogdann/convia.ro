@@ -21,7 +21,7 @@ export const features: Feature[] = [
     icon: Clock,
     title: "Răspunsuri instant, 24/7",
     description:
-      "Botul tău răspunde clienților oricând — la 9 dimineața sau la 3 noaptea. Niciun client pierdut pentru că nu erai la birou.",
+      "Botul tău răspunde clienților oricând, la 9 dimineața sau la 3 noaptea. Niciun client pierdut pentru că nu erai la birou.",
   },
   {
     id: "knowledge",
@@ -35,7 +35,7 @@ export const features: Feature[] = [
     icon: MessagesSquare,
     title: "Site web și WhatsApp",
     description:
-      "Pui botul pe site cu un cod copy-paste, sau îl conectezi la WhatsApp Business — clienții te găsesc unde le e mai ușor.",
+      "Pui botul pe site cu un cod copy-paste, sau îl conectezi la WhatsApp Business. Clienții te găsesc unde le e mai ușor.",
   },
   {
     id: "human",

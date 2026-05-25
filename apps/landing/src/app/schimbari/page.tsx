@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/schimbari" },
   openGraph: {
     type: "website",
-    title: "Schimbări · Convia",
+    title: "Convia | Schimbări",
     description: "Istoric de actualizări pentru platforma Convia.",
     url: "/schimbari",
   },

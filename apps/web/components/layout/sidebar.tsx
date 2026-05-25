@@ -2,14 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Bot,
-  Inbox,
-  LayoutDashboard,
-  Library,
-  Settings,
-  Sparkles,
-} from "lucide-react";
+import { Bot, Inbox, LayoutDashboard, Settings, Sparkles } from "lucide-react";
 import { BrandMark } from "@/components/brand/brand-mark";
 import { cn } from "@/lib/utils";
 
@@ -23,7 +16,6 @@ const NAV: NavItem[] = [
   { label: "Acasă", href: "/dashboard", icon: LayoutDashboard },
   { label: "Boții mei", href: "/agents", icon: Bot },
   { label: "Inbox", href: "/conversations", icon: Inbox },
-  { label: "Bază de cunoștințe", href: "/knowledge-base", icon: Library },
   { label: "Setări", href: "/settings", icon: Settings },
 ];
 

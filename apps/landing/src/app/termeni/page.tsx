@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/termeni" },
   openGraph: {
     type: "website",
-    title: "Termeni și condiții · Convia",
+    title: "Convia | Termeni și condiții",
     description:
-      "Termenii și condițiile de utilizare a platformei Convia — chatbot AI pentru afaceri din România.",
+      "Termenii și condițiile de utilizare a platformei Convia: chatbot AI pentru afaceri din România.",
     url: "/termeni",
   },
 };
@@ -68,24 +68,24 @@ export default function TermsPage() {
           <p>Serviciul este oferit în următoarele pachete:</p>
           <ul>
             <li>
-              <strong>Gratuit</strong> — 0 RON/lună. Include 1 chatbot, 100 conversații/lună,
+              <strong>Gratuit</strong>: 0 RON/lună. Include 1 chatbot, 100 conversații/lună,
               conectare la site web, model AI standard, branding Convia și suport prin email.
             </li>
             <li>
-              <strong>Business</strong> — 149 RON/lună (sau 119 RON/lună la plata anuală). Include 3
+              <strong>Business</strong>: 149 RON/lună (sau 119 RON/lună la plata anuală). Include 3
               chatboți, 1.000 conversații/lună incluse, site web + WhatsApp, modele AI premium
               (OpenAI și Anthropic), branding personalizat, preluare umană și suport prioritar în
               limba română. Conversațiile suplimentare se taxează cu 0,25 RON/conversație + TVA.
             </li>
             <li>
-              <strong>Premium</strong> — 349 RON/lună (sau 279 RON/lună la plata anuală). Include
+              <strong>Premium</strong>: 349 RON/lună (sau 279 RON/lună la plata anuală). Include
               chatboți nelimitați, 5.000 conversații/lună incluse, toate canalele (Site, WhatsApp,
               Messenger, Instagram), modele AI premium + acces prioritar la modele noi, statistici
               avansate, integrare cu CRM și calendar și manager de cont dedicat. Conversațiile
               suplimentare se taxează cu 0,12 RON/conversație + TVA.
             </li>
             <li>
-              <strong>Enterprise</strong> — Preț personalizat. Conversații și chatboți nelimitați,
+              <strong>Enterprise</strong>: Preț personalizat. Conversații și chatboți nelimitați,
               acord de prelucrare a datelor (DPA), SLA garantat, onboarding cu echipa noastră și
               integrare custom. Contactează{" "}
               <a href="mailto:salut@convia.ro">salut@convia.ro</a>.
@@ -177,7 +177,7 @@ export default function TermsPage() {
             Vezi <a href="/confidentialitate">Politica de confidențialitate</a> pentru detalii.
           </p>
 
-          <h3>5.4 Acord de prelucrare a datelor (GDPR — DPA)</h3>
+          <h3>5.4 Acord de prelucrare a datelor (GDPR, DPA)</h3>
           <p>
             Când folosești Serviciul pentru a prelucra date cu caracter personal ale
             utilizatorilor tăi finali, tu acționezi ca operator de date și noi acționăm ca persoană
@@ -217,7 +217,7 @@ export default function TermsPage() {
           <p>
             Depunem eforturi rezonabile pentru a menține o disponibilitate ridicată, dar nu
             garantăm accesul neîntrerupt la Serviciu. Putem efectua mentenanță programată cu un
-            preaviz rezonabil. Suportul se acordă în funcție de pachetul abonat — prin email pentru
+            preaviz rezonabil. Suportul se acordă în funcție de pachetul abonat: prin email pentru
             Gratuit, prioritar pentru Business și Premium, și prin manager de cont dedicat pentru
             Enterprise. Suportul este oferit în limba română.
           </p>

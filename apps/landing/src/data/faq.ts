@@ -12,7 +12,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Trebuie să știu cod ca să-l pun pe site? Pot să-mi ajute cineva?",
     answer:
-      "Nu, nu ai nevoie de cunoștințe tehnice. Botul se adaugă cu o singură linie de cod copy-paste — funcționează pe WordPress, Shopify, Webflow, Gomag și orice site. Dacă nu te descurci sau pur și simplu nu vrei să te chinui, echipa noastră îl instalează gratuit pe site-ul tău. Tu ne dai accesul la admin (sau ne arăți unde să-l adăugăm), iar noi îl punem la treabă în 5 minute.",
+      "Nu, nu ai nevoie de cunoștințe tehnice. Botul se adaugă cu o singură linie de cod copy-paste și funcționează pe WordPress, Shopify, Webflow, Gomag și orice site. Dacă nu te descurci sau pur și simplu nu vrei să te chinui, echipa noastră îl instalează gratuit pe site-ul tău. Tu ne dai accesul la admin (sau ne arăți unde să-l adăugăm), iar noi îl punem la treabă în 5 minute.",
   },
   {
     question: "Pot folosi propriile mele informații (site, PDF-uri, Excel)?",
@@ -22,7 +22,7 @@ export const faqs: FaqItem[] = [
   {
     question: "Ce se întâmplă când botul nu știe răspunsul?",
     answer:
-      "Primești o notificare instant (pe email sau WhatsApp) și poți prelua conversația fără să o iei de la zero — vezi tot contextul. Sau poți seta botul să spună „Te conectez cu un coleg, te rog așteaptă un moment”. Tu decizi.",
+      "Primești o notificare instant (pe email sau WhatsApp) și poți prelua conversația fără să o iei de la zero, vezi tot contextul. Sau poți seta botul să spună „Te conectez cu un coleg, te rog așteaptă un moment”. Tu decizi.",
   },
   {
     question: "Funcționează corect în limba română?",

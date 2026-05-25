@@ -2,11 +2,11 @@
   "name": "@convia/landing",
   "version": "0.1.0",
   "private": true,
-  "description": "Convia.ro — Romanian AI chatbot platform landing page",
+  "description": "Convia.ro: Romanian AI chatbot platform landing page",
   "scripts": {
-    "dev": "next dev --turbo --port 7000",
+    "dev": "next dev --turbo --port 9000",
     "build": "next build",
-    "start": "next start --port 7000",
+    "start": "next start --port 9000",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf .next node_modules .turbo"

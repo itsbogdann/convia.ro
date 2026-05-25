@@ -28,7 +28,10 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  outputFileTracingRoot: resolve(__dirname),
+  turbopack: {
+    root: resolve(__dirname, "../.."),
+  },
+  outputFileTracingRoot: resolve(__dirname, "../.."),
   images: {
     formats: ["image/avif", "image/webp"],
   },

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/docs" },
   openGraph: {
     type: "website",
-    title: "Documentație · Convia",
+    title: "Convia | Documentație",
     description: "Documentație tehnică pentru integrarea Convia.",
     url: "/docs",
   },

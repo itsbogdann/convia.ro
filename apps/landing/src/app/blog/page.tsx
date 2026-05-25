@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
   openGraph: {
     type: "website",
-    title: "Blog · Convia",
+    title: "Convia | Blog",
     description:
       "Articole despre AI, automatizarea suportului și e-commerce în România. Scrise pentru antreprenori.",
     url: "/blog",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog · Convia",
+    title: "Convia | Blog",
     description: "Articole despre AI și automatizarea suportului pentru afaceri din România.",
   },
   keywords: [
