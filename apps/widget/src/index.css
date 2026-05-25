@@ -1,0 +1,192 @@
+/* Convia Widget Styles */
+/* All classes prefixed with 'lr-' to avoid conflicts */
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset for widget container — target both embed (#convia-widget-root) and dev (#root) */
+#convia-widget-root,
+#root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#convia-widget-root *,
+#convia-widget-root *::before,
+#convia-widget-root *::after,
+#root *,
+#root *::before,
+#root *::after {
+  box-sizing: border-box;
+}
+
+/* Ensure form elements inherit the font and reset browser defaults */
+#convia-widget-root input,
+#convia-widget-root textarea,
+#convia-widget-root button,
+#root input,
+#root textarea,
+#root button {
+  font-family: inherit;
+}
+
+/* Reset browser default button styles (preflight is disabled to avoid host page conflicts) */
+/* Only reset visual properties — padding/margin are handled by Tailwind classes */
+#convia-widget-root button,
+#root button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+#convia-widget-root input,
+#convia-widget-root textarea,
+#root input,
+#root textarea {
+  background-color: transparent;
+  border: none;
+}
+
+/* Hide scrollbars globally — content remains scrollable */
+#convia-widget-root,
+#convia-widget-root *,
+#root,
+#root * {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#convia-widget-root ::-webkit-scrollbar,
+#convia-widget-root *::-webkit-scrollbar,
+#root ::-webkit-scrollbar,
+#root *::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar utility */
+.lr-scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.lr-scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation keyframes */
+@keyframes lr-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes lr-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lr-animate-pulse {
+  animation: lr-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.lr-animate-spin {
+  animation: lr-spin 1s linear infinite;
+}
+
+/* Portal fade-in animations — CSS-based for reliable production embed behavior */
+@keyframes lr-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lr-fade-slide-down {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lr-animate-fade-in {
+  animation: lr-fade-in 0.3s ease-out both;
+}
+
+.lr-animate-fade-slide-down {
+  animation: lr-fade-slide-down 0.3s ease-out both;
+}
+
+@keyframes lr-fade-slide-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lr-animate-fade-slide-up {
+  animation: lr-fade-slide-up 0.3s ease-out both;
+}
+
+@keyframes lr-scale-fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lr-animate-scale-fade-in {
+  animation: lr-scale-fade-in 0.3s ease-out both;
+}
+
+/* FAQ expand/collapse using grid trick for smooth height animation */
+.lr-faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.2s ease-out, opacity 0.2s ease-out;
+}
+.lr-faq-content.lr-expanded {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+.lr-faq-content > * {
+  overflow: hidden;
+}
+
+/* Stagger children: each child delays progressively */
+.lr-stagger > * { animation: lr-fade-in 0.3s ease-out both; }
+.lr-stagger > *:nth-child(1) { animation-delay: 0.06s; }
+.lr-stagger > *:nth-child(2) { animation-delay: 0.13s; }
+.lr-stagger > *:nth-child(3) { animation-delay: 0.20s; }
+.lr-stagger > *:nth-child(4) { animation-delay: 0.27s; }
+.lr-stagger > *:nth-child(5) { animation-delay: 0.34s; }
+.lr-stagger > *:nth-child(6) { animation-delay: 0.41s; }
+.lr-stagger > *:nth-child(7) { animation-delay: 0.48s; }
+.lr-stagger > *:nth-child(8) { animation-delay: 0.55s; }
+
+/* Interactive card hover/tap — replaces framer-motion whileHover/whileTap */
+.lr-card-interactive {
+  transition: transform 0.15s ease;
+}
+.lr-card-interactive:hover {
+  transform: scale(1.02);
+}
+.lr-card-interactive:active {
+  transform: scale(0.98);
+}
+
+/* Focus styles */
+#convia-widget-root button:focus-visible,
+#convia-widget-root textarea:focus-visible,
+#convia-widget-root input:focus-visible,
+#root button:focus-visible,
+#root textarea:focus-visible,
+#root input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}

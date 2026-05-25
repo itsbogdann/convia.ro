@@ -1,0 +1,43 @@
+{
+  "name": "@convia/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Convia dashboard — Next.js 15 + Tailwind 3 + Supabase",
+  "scripts": {
+    "dev": "next dev --turbo --port 7001",
+    "build": "next build",
+    "start": "next start --port 7001",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf .next node_modules .turbo"
+  },
+  "dependencies": {
+    "@convia/shared-types": "workspace:*",
+    "@hookform/resolvers": "^3.9.0",
+    "@supabase/ssr": "^0.5.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "@tanstack/react-query": "^5.56.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
+    "lucide-react": "^0.460.0",
+    "next": "15.5.12",
+    "react": "19.1.4",
+    "react-dom": "19.1.4",
+    "react-hook-form": "^7.53.0",
+    "sonner": "^1.5.0",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^3.23.8",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.12",
+    "postcss": "^8.4.0",
+    "tailwindcss": "3.4.17",
+    "typescript": "^5.6.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "convia",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Convia — primul chatbot AI gândit pentru afaceri din România",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:landing": "turbo run dev --filter=@convia/landing",
+    "dev:web": "turbo run dev --filter=@convia/web",
+    "dev:api": "turbo run dev --filter=@convia/api",
+    "dev:widget": "turbo run dev --filter=@convia/widget",
+    "build": "turbo run build",
+    "build:landing": "turbo run build --filter=@convia/landing",
+    "build:web": "turbo run build --filter=@convia/web",
+    "build:api": "turbo run build --filter=@convia/api",
+    "build:widget": "turbo run build --filter=@convia/widget",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "typescript": "^5.6.0"
+  },
+  "packageManager": "bun@1.1.0"
+}

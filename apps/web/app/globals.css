@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Gilroy font family ─────────────────────────────────────────────── */
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy/Gilroy-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy/Gilroy-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy/Gilroy-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── CSS variables (mirror Tailwind tokens for raw CSS usage) ───────── */
+:root {
+  --ink: #0B1220;
+  --ink-2: #1E293B;
+  --ink-3: #475569;
+  --muted: #64748B;
+  --soft: #94A3B8;
+  --surface: #FFFFFF;
+  --surface-2: #F8FAFC;
+  --surface-3: #F1F5F9;
+  --line: rgba(11, 18, 32, 0.08);
+  --line-strong: rgba(11, 18, 32, 0.14);
+  --accent: #1D4ED8;
+  --accent-hover: #1E40AF;
+  --accent-soft: #EFF6FF;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: "Gilroy", ui-sans-serif, system-ui, sans-serif;
+  background: var(--surface-2);
+  color: var(--ink);
+  font-size: 14.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body text defaults to medium weight (500) but headings and emphasized
+   elements get heavier weights from their utility classes. */
+
+/* ─── Utility classes used across the dashboard ──────────────────────── */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-5 rounded-xl bg-accent text-white text-[14px] font-bold transition-all shadow-cta hover:bg-accent-hover hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-5 rounded-xl bg-white text-ink text-[14px] font-bold border border-line-strong transition-all hover:bg-surface-2 hover:border-line-strong active:bg-surface-3 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 h-10 px-4 rounded-xl text-ink-2 text-[14px] font-semibold transition-colors hover:bg-surface-2 hover:text-ink active:bg-surface-3 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-sm {
+    @apply h-8 px-3 text-[13px];
+  }
+
+  .card {
+    @apply bg-white border border-line rounded-2xl shadow-card;
+  }
+
+  .card-hover {
+    @apply transition-all hover:border-line-strong hover:shadow-card-lg;
+  }
+
+  .input {
+    @apply w-full h-10 px-3.5 rounded-xl border border-line-strong bg-white text-[14px] font-semibold text-ink placeholder:text-soft transition-colors focus:outline-none focus:border-accent focus:ring-4 focus:ring-[rgba(29,78,216,0.12)];
+  }
+
+  .label {
+    @apply block text-[13px] font-bold text-ink mb-1.5;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-accent;
+  }
+}
+
+/* ─── Reduced motion ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ─── Custom scrollbar (subtle, matches landing) ─────────────────────── */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 18, 32, 0.16);
+  border-radius: 999px;
+  border: 3px solid var(--surface-2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 18, 32, 0.26);
+}

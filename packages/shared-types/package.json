@@ -1,0 +1,16 @@
+{
+  "name": "@convia/shared-types",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}

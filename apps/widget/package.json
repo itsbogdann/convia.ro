@@ -1,0 +1,41 @@
+{
+  "name": "@convia/widget",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Convia embeddable chat widget — built with Vite + React",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 7003",
+    "build": "tsc && vite build && vite build --config vite.embed.config.ts",
+    "build:embed": "vite build --config vite.embed.config.ts",
+    "preview": "vite preview",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules .turbo"
+  },
+  "dependencies": {
+    "@convia/shared-types": "workspace:*",
+    "@supabase/supabase-js": "2.95.3",
+    "@types/dompurify": "3.2.0",
+    "dompurify": "3.3.1",
+    "framer-motion": "^11.11.0",
+    "lucide-react": "^0.460.0",
+    "react": "19.1.4",
+    "react-dom": "19.1.4",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vite-plugin-css-injected-by-js": "^3.5.0"
+  }
+}
