@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import type { Metadata } from "next";
 import {
   Activity,
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
 type ComponentStatus = {
   name: string;
   description: string;
-  icon: typeof Activity;
+  icon: ComponentType<{ className?: string; strokeWidth?: number }>;
   status: "operational" | "degraded" | "down";
 };
 
